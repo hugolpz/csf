@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD ------------------------------------------------------ -->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Chinois sans frontière</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest jQuery from Google CDN -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Beautify Web - HTML, CSS, JS https://beautifier.io -->
+    <script src="js/beautify-web/beautify-html.js"></script>
+    <script src="js/beautify-web/beautify-css.js"></script>
+    <script src="js/beautify-web/beautify.js"></script>
+    <!-- Ace Editor. See also: github.com/ajaxorg/ace/tree/master/lib/ace/theme -->
+    <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/ace/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+    <!-- Together -->
+    <script src="//togetherjs.com/togetherjs-min.js"></script>
+    <!-- CSS frameworks : latests, theme -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+
+    <!-- Custom to project -->
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="_css/main.css" type="text/css">
+
+    <!-- PWA TEST -->
+    <link rel="manifest" href="/manifest.webmanifest.json">
+    <script src="_pwa-service-worker.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      };
+
+    </script>
+
+  </head>
+
+  <body>
+    <!-- TOPBAR ------------------------------------------------------ -->
+    <style>
+      .unicorn {
+        background: url('data:image/svg+xml;charset=UTF-8,<svg data-icon="utensil-fork" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path _fill="%2300D1B2" fill="%23F14668" d="M631.98 32H531.73c5.93-6.14 10.4-13.63 12.18-22.36 1.01-4.96-2.88-9.64-7.94-9.64H416c-70.69 0-128 57.31-128 128h-.08c-63.92 0-104.2-36.78-127.66-90.27-3.22-7.35-13.61-7.76-17.04-.5C133.49 57.82 128 80.8 128 105.1c0 67.04 51.01 133.09 128 147.74v3.17c-76.89 0-133.8-49.67-152.67-108.99-5.58 4.17-10.75 8.86-15.33 14.1V160c-48.53 0-88 39.47-88 88v56c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-56c0-13.22 6.87-24.39 16.78-31.68-.21 2.58-.78 5.05-.78 7.68 0 27.64 11.84 52.36 30.54 69.88l-25.72 68.6a63.945 63.945 0 0 0-2.16 37.99l24.85 99.41A15.982 15.982 0 0 0 107.02 512h65.96c10.41 0 18.05-9.78 15.52-19.88l-26.31-105.26 23.84-63.59 102.04 22.33V496c0 8.84 7.16 16 16 16h64c8.84 0 16-7.16 16-16V318.22c19.74-20.19 32-47.75 32-78.22 0-.22-.07-.42-.08-.64V136.89l16 7.11 18.9 37.7c7.45 14.87 25.05 21.55 40.49 15.37l32.55-13.02a31.997 31.997 0 0 0 20.12-29.74L544 83.3l92.42-36.65c6.59-4.38 3.48-14.65-4.44-14.65zM480 96c-8.84 0-16-7.16-16-16s7.16-16 16-16 16 7.16 16 16-7.16 16-16 16z"></path></svg>') center no-repeat;
+        background-color: none;
+        background-size: 100%;
+        <span class="icon"><i class="fab fa-lg fa-github-alt fa-w-15"></i></span></a><a class="navbar-item is-hidden-desktop"href="https://twitter
+width: 32px;
+        height: 32px;
+        transform: rotateY(0deg) rotate(-0deg);
+      }
+
+    </style>
+    <nav class="navbar has-shadow">
+      <!-- NAVBAR BASE: while on small devices-->
+      <div class="navbar-brand">
+        <!-- LOGO AND NAME -->
+        <a id="appLogo" class="navbar-item" href="./">
+          <i class="icon unicorn" style="margin-right: 0.2rem !important;"></i>
+          <span class="has-text-weight-bold has-text-black is-size-4 is-hidden-touch">Chinois Sans Frontière</span>
+        </a>
+        <a id="btnDialogues" class="navbar-item"><span class="icon"><i class="fa fa-align-left"></i></span> <span>Dialogues</span></a>
+        <a id="btnLexiques" class="navbar-item"><span class="icon has-text-danger"><i class="fa fa-scroll"></i></span> <span>Lexiques</span></a>
+        <a id="btnConvert" class="navbar-item"><span class="icon has-text-primary"><i class="fa fa-sync-alt"></i></span> <span>Trad-Simp</span></a>
+        <!-- Github & Twitter : is-hidden-desktop ; style="margin-left:auto;" -->
+        <a class="navbar-item is-hidden-desktop has-text-primary" style="margin-left:auto;" href="https://github.com/" target="_blank">
+          <span class="icon"><i class="fab fa-lg fa-github-alt fa-w-15"></i></span>
+        </a>
+        <a class="navbar-item is-hidden-desktop" href="https://twitter.com/intent/tweet?text=Je%20teste%20Chinois-Sans-Frontière.%0ahttps:%2F%2Fhugolpz.github.io%2FCSF%2F&amp;via=Github%20@hugo_lz&amp;hashtags=Chinois" target="_blank">
+          <span class="icon" style="color: #55acee;"><i class="fab fa-lg fa-twitter fa-w-16"></i></span>
+        </a>
+        <!-- BURGER when small devices -->
+        <div id="navbarBurger" class="navbar-burger" style="margin-left:0;">
+          <!-- data-target="navbar-menu" -->
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- NAVBAR ADDON: while on large devices-->
+      <div id="navbar-menu" class="navbar-menu">
+        <!-- Aligned LEFT tabs/menus -->
+        <div class="navbar-start">
+          <a id="btnAbout" class="navbar-item"><span class="icon"><i class="fa fa-users"></i></span> <span>Crédits</span></a>
+        </div>
+        <!-- Aligned RIGHT tabs/menus -->
+        <div class="navbar-end">
+          <!-- Github & Twitter : is-hidden-touch -->
+          <a class="navbar-item is-hidden-touch has-text-primary" href="https://github.com/hugolpz/CSF" target="_blank">
+            <span class="icon"><i class="fab fa-lg fa-github-alt fa-w-15"></i></span>
+          </a>
+          <a class="navbar-item is-hidden-touch" href="https://twitter.com/intent/tweet?text=Je%20teste%20Chinois-Sans-Frontière.%0ahttps:%2F%2Fhugolpz.github.io%2FCSF%2F&amp;via=Github%20@hugo_lz&amp;hashtags=Chinois" target="_blank">
+            <span class="icon" style="color: #55acee;"><i class="fab fa-lg fa-twitter fa-w-16"></i></span>
+          </a>
+        </div><!-- /navbar-end -->
+      </div><!-- /navbar-menu -->
+    </nav>
+    <script>
+      var burger = document.querySelector("#navbarBurger");
+      burger.addEventListener("click", (event) => {
+        event.stopPropagation();
+        document.querySelector(".navbar-burger").classList.toggle("is-active"); // burgers
+        document.querySelector(".navbar-menu").classList.toggle("is-active"); // menus
+      });
+
+    </script>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------- -->
+    <!-- MAIN -------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------- -->
+    <main class="columns mx-0 my-0">
+      <!-- SIDEBAR ----------------------------------------------------- -->
+      <section class="menu-left column is-2 px-1 pt-1 pb-0" id="main-left">
+        <!-- Document's options ---------- -->
+        <article class="message mb-1 is-primary">
+          <div class="message-header is-small">
+            Tome 1 <i class="icon caret has-background-primary-dark is-rounded"></i>
+          </div>
+          <div class="message-body">
+            <p>
+              Leçon 1<br>
+              Leçon 2<br>
+              Leçon 3<br>
+              Leçon 4<br>
+              Leçon 5<br>
+              Leçon 6<br>
+              Leçon 7<br>
+              Leçon 8
+            </p>
+          </div>
+        </article>
+
+        <!-- Show ---- -->
+        <article class="message mb-1 is-primary">
+          <div class="message-header has-background-grey-light">
+            Afficher/Masquer <i class="icon caret has-background-primary-dark is-rounded"></i>
+          </div>
+          <div class="message-body">
+            <p class="buttons">
+
+              <a class="button is-small is-success">
+                <span class="icon has-text-danger">
+                  <i class="fas fa-heart"></i>
+                </span>
+                <span>Dialogues</span>
+              </a>
+              <a class="button is-small is-danger">
+                <span>Lexiques</span>
+                <span class="icon">
+                  <i class="fas fa-eye"></i>
+                </span>
+              </a>
+              <a class="button is-small has-background-grey-light">
+                <span>Lexiques</span>
+                <span class="icon">
+                  <i class="fas fa-eye-slash"></i>
+                </span>
+              </a>
+              <a class="button is-small is-danger">
+                <span>Sinogrammes</span>
+                <span class="icon">
+                  <i class="fas fa-eye"></i>
+                </span>
+              </a>
+
+            </p>
+          </div>
+        </article>
+
+        <!-- Legal, Credits and Links ---- -->
+        <article class="message mb-1 is-danger">
+          <div class="message-header">
+            Crédits <i class="icon caret has-background-primary-dark is-rounded"></i>
+          </div>
+          <div class="message-body">
+            <div class="content is-small">
+              <p>Extraits du manuel <b><i>Chinois Sans Frontière</i></b>
+                <a href="https://librairielephenix.fr/livres/chinois-sans-frontieres-tome-i-9782378680008.html">Tome 1</a> et
+                <a href="https://librairielephenix.fr/livres/chinois-sans-frontieres-tome-2-9782378680015.html">Tome 2</a>
+                — Shih-chang Hsin, Miao Lin-Zucker.</p>
+            </div>
+          </div>
+        </article>
+
+        <style>
+          .menu-left> {}
+
+          .menu-left .caret {
+            transform: rotate(0deg);
+            background: url('data:image/svg+xml;charset=UTF-8,<svg data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="white" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg>') center no-repeat;
+            background-size: 50%
+          }
+
+          .menu-left .message .message-body {
+            display: none;
+          }
+
+          .menu-left .message.is-active .message-body {
+            display: block;
+          }
+
+          .menu-left .message.is-active .caret {
+            background: url('data:image/svg+xml;charset=UTF-8,<svg data-icon="aling-justify" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="white" d="M432 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg>') center no-repeat;
+            background-size: 50%;
+            transform: rotate(180deg);
+          }
+
+          .caret.is-rounded {
+            border-radius: 50%;
+          }
+
+        </style>
+        <script>
+          var menus = document.querySelectorAll(".menu-left .message-header");
+          menus.forEach((menu) => {
+            // adds on each menu an onClick event
+            menu.addEventListener("click", (event) => {
+              event.stopPropagation();
+              // action: act on each menus, remove or toggle class "is-active"
+              menus.forEach(function(item) {
+                $message = item.closest('article');
+                $caret = item.closest('article').querySelector(".message-header .caret");
+                $messageBody = item.closest('article').querySelector(".message-body")
+                if (menu == item) {
+                  $message.classList.toggle("is-active");
+                  //	$caret.classList.toggle("is-rotate-180");
+                  //	$messageBody.classList.toggle("is-hidden");
+                } else {
+                  $message.classList.remove("is-active");
+                  // $caret.classList.remove("is-rotate-180");
+                  // $messageBody.classList.add("is-hidden");
+                }
+              });
+            });
+          });
+
+        </script>
+
+      </section>
+
+      <!-- Editors pads ------------------------------------------------ -->
+      <style>
+        /* **************************************************************** */
+        /* LESSONS BOXES ************************************************** */
+        .lesson {
+          box-sizing: border-box;
+          word-break: break-all;
+          border: 1px #cecece solid;
+          /*
+					overflow: hidden; */
+        }
+        h2.fra,
+        h3.fra { color: #FFB000; margin-left:.4em; }
+        h3 { display:inline-block; }
+        p.hant { font-size: 1.5em; }
+      </style>
+      <section id="main-center" class="column is-8 px-1 pt-1 pb-0 tile has-background-white">
+        <div class="tile is-12 is-vertical">
+          <div class="tile lesson mr-2 mb-2" id="T1L1"></div>
+
+          <h2 class="title hant">一、對話</h2>
+          <h2 class="title fra">Dialogues</h2>
+
+          <div class="dialogue">
+            <h3 class="title hant">對話 A、你好</h2>
+            <h3 class="title fra">Dialogue A : Bonjour !</h3>
+              <br style="clear:both;"/>
+            <p class="subtitle hant">在台灣:尼古拉是一位從法國到台灣學習中文的學生,他在教室裡跟老師談話。</p>
+            <p class="subtitle fra">À Taiwan : Nicolas est un étudiant français qui vit à Taiwan pour apprendre le chinois. Il
+            discute avec sa professeur dans une salle de cours.</p>
+            <image src="./images/Tome_1-Lesson_1-Dialogue_A.png" />
+            <p class="hant">尼古拉:老師好!<br>
+            林老師:你好!你叫什麼名字?<br>
+            尼古拉:我叫尼古拉。<br>
+            林老師:你是哪國人?<br>
+            尼古拉:我是法國人。</p>?
+          </div>
+
+          <div class="dialogue">
+            <h3 class="title hant">對話B、早!</h3>
+            <h3 class="title fra">Dialogue B : Bonjour !</h3>
+            <p class="subtitle hant">在法國:王中平、李天在里昂學法文。一天,他們在大學裡遇到法國學生白馬丁。</p>
+            <p class="subtitle fra">En France : Wang Zhongping et Li Tian sont à Lyon pour apprendre le français. Un jour, ils
+            rencontrent à l'université un étudiant français qui s'appelle Martin Blanc.</p>
+            <image src="./images/Tome_1-Lesson_1-Dialogue_B.png" />
+            <p class="hant">
+              馬丁:早!你們好!
+              中平:你好!你叫什麼名字?
+              馬丁:我叫馬丁。你呢?
+              中平:我叫王中平,他叫李天,
+              &nbsp;&nbsp;你姓什麼?
+              馬丁:我姓白。你們是不是中國人?
+              中平:是啊!我是北京人,他是上海人。
+            </p>
+          </div>
+
+          <div class="dialogue">
+            <h3 class="hant">對話 C、您貴姓?</h3>
+            <h3 class="fra">Dialogue C : Quel est votre nom ?</h3>
+            <p class="hant">在中國:朱力安是在中國做生意的法國商人,張玲是他初次見面的同事。</p>
+            <p class="fra">En Chine : Julien est un homme d'affaires français qui travaille en Chine. Zhang Ling est sa
+            collègue qu'il rencontre pour la première fois.</p>
+            <image src="./images/Tome_1-Lesson_1-Dialogue_C.png" />
+            <p class="hant">
+              朱力安:您好!<br>
+              張 玲:您好!您貴姓?<br>
+              朱力安:我姓朱,您呢?<br>
+              張 玲:我姓張。您是美國人嗎?<br>
+              朱力安:不是,我是法國人。<br>
+              &nbsp;&nbsp;您是哪國人?<br>
+              張 玲:我是中國人。</p>?
+          </div>
+
+      </section>
+
+      <section id="main-right" class="column is-2 px-1 pt-1 pb-0 tile has-background-light"></section>
+      <script></script>
+
+    </main>
+
+    <!-- FOOTER ------------------------------------------------------ -->
+    <section class="footer is-hidden">
+      <div class="content has-text-centered">Footer</div>
+    </section>
+
+  </body>
+
+</html>
