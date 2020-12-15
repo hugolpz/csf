@@ -89,7 +89,7 @@ width: 32px;
         <!-- Aligned RIGHT tabs/menus -->
         <div class="navbar-end">
           <!-- Github & Twitter : is-hidden-touch -->
-          <a class="navbar-item is-hidden-touch has-text-primary" href="https://github.com/hugolpz/CSF" target="_blank">
+          <a class="navbar-item is-hidden-touch has-text-primary" href="https://github.com/hugolpz/chinois-sans-frontieres" target="_blank">
             <span class="icon"><i class="fab fa-lg fa-github-alt fa-w-15"></i></span>
           </a>
           <a class="navbar-item is-hidden-touch" href="https://twitter.com/intent/tweet?text=Je%20teste%20Chinois-Sans-Frontière.%0ahttps:%2F%2Fhugolpz.github.io%2FCSF%2F&amp;via=Github%20@hugo_lz&amp;hashtags=Chinois" target="_blank">
@@ -113,7 +113,7 @@ width: 32px;
     <!-- MAIN -------------------------------------------------------- -->
     <!-- ------------------------------------------------------------- -->
     <!-- ------------------------------------------------------------- -->
-    <main class="columns mx-0 my-0">
+    <main class="columns is-tablet mx-0 my-0">
       <!-- SIDEBAR ----------------------------------------------------- -->
       <section class="menu-left column is-2 px-1 pt-1 pb-0" id="main-left">
         <!-- Document's options ---------- -->
@@ -254,71 +254,113 @@ width: 32px;
           /*
 					overflow: hidden; */
         }
+
+        /* Structure ****************************************************** */
+        .dialogue { padding-bottom: 1em; }
+        h3.hant { margin-right:.4em; }
+        .inline { display:inline-block; }
+        img.left { float:left; width:50%; margin-right:2em; }
+
+
+        /* Linguistic ****************************************************** */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap');
+        .hant { font-size: 1.5em; font-family: 'Noto Serif TC', serif; }
+        .hant {
+          position: relative;
+          padding-right:1em;
+        }
+        .hant .icon {
+          top:0.1em;
+          right: 0em;
+          position: absolute;
+        }
         h2.fra,
-        h3.fra { color: #FFB000; margin-left:.4em; }
-        h3 { display:inline-block; }
-        p.hant { font-size: 1.5em; }
+        h3.fra { color: #FFB000; }
+
       </style>
-      <section id="main-center" class="column is-8 px-1 pt-1 pb-0 tile has-background-white">
-        <div class="tile is-12 is-vertical">
-          <div class="tile lesson mr-2 mb-2" id="T1L1"></div>
+      <section id="main-center" class="column is-8 px-6 pt-6 pb-6 tile has-background-white">
+        <div id="T1L1">
 
-          <h2 class="title hant">一、對話</h2>
-          <h2 class="title fra">Dialogues</h2>
+          <h2 class="title is-2 hant is-inline-block">一、對話</h2>
+          <h2 class="title is-2 fra is-inline-block">Dialogues</h2>
 
-          <div class="dialogue">
-            <h3 class="title hant">對話 A、你好</h2>
-            <h3 class="title fra">Dialogue A : Bonjour !</h3>
-              <br style="clear:both;"/>
-            <p class="subtitle hant">在台灣:尼古拉是一位從法國到台灣學習中文的學生,他在教室裡跟老師談話。</p>
-            <p class="subtitle fra">À Taiwan : Nicolas est un étudiant français qui vit à Taiwan pour apprendre le chinois. Il
-            discute avec sa professeur dans une salle de cours.</p>
-            <image src="./images/Tome_1-Lesson_1-Dialogue_A.png" />
-            <p class="hant">尼古拉:老師好!<br>
-            林老師:你好!你叫什麼名字?<br>
-            尼古拉:我叫尼古拉。<br>
-            林老師:你是哪國人?<br>
-            尼古拉:我是法國人。</p>?
+          <div class="dialogue columns is-tablet is-multiline is-centered is-vcentered">
+            <div class="column is-12">
+              <h3 class="title hant is-inline-block">對話 A、你好</h3>
+              <h3 class="title fra is-inline-block">Dialogue A : Bonjour !</h3>
+              <p class="subtitle hant">
+                <span class="icon has-text-danger">
+                  <i class="fas fa-play" aria-hidden="true"></i>
+                </span>
+                在台灣:尼古拉是一位從法國到台灣學習中文的學生,他在教室裡跟老師談話。</p>
+              <p class="subtitle fra">À Taiwan : Nicolas est un étudiant français qui vit à Taiwan pour apprendre le chinois. Il
+              discute avec sa professeur dans une salle de cours.</p>
+            </div>
+            <div class="column is-6">
+              <img src="./images/Tome_1-Lesson_1-Dialogue_A.png" alt="">
+            </div>
+            <div class="column is-6">
+              <p class="hant">
+                <span class="icon is-small has-text-danger">
+                  <i class="fas fa-play" aria-hidden="true"></i>
+                </span>
+                尼古拉:老師好!<br>
+                林老師:你好!你叫什麼名字?<br>
+                尼古拉:我叫尼古拉。<br>
+                林老師:你是哪國人?<br>
+                尼古拉:我是法國人。
+              </p>
+            </div>
           </div>
 
-          <div class="dialogue">
-            <h3 class="title hant">對話B、早!</h3>
-            <h3 class="title fra">Dialogue B : Bonjour !</h3>
-            <p class="subtitle hant">在法國:王中平、李天在里昂學法文。一天,他們在大學裡遇到法國學生白馬丁。</p>
-            <p class="subtitle fra">En France : Wang Zhongping et Li Tian sont à Lyon pour apprendre le français. Un jour, ils
-            rencontrent à l'université un étudiant français qui s'appelle Martin Blanc.</p>
-            <image src="./images/Tome_1-Lesson_1-Dialogue_B.png" />
-            <p class="hant">
-              馬丁:早!你們好!
-              中平:你好!你叫什麼名字?
-              馬丁:我叫馬丁。你呢?
-              中平:我叫王中平,他叫李天,
-              &nbsp;&nbsp;你姓什麼?
-              馬丁:我姓白。你們是不是中國人?
-              中平:是啊!我是北京人,他是上海人。
-            </p>
+          <div class="dialogue columns is-tablet is-multiline is-centered is-vcentered">
+            <div class="column is-12">
+              <h3 class="title hant is-inline-block">對話B、早!</h3>
+              <h3 class="title fra is-inline-block">Dialogue B : Bonjour !</h3>
+              <p class="subtitle hant">在法國:王中平、李天在里昂學法文。一天,他們在大學裡遇到法國學生白馬丁。</p>
+              <p class="subtitle fra">En France : Wang Zhongping et Li Tian sont à Lyon pour apprendre le français. Un jour, ils
+              rencontrent à l'université un étudiant français qui s'appelle Martin Blanc.</p>
+            </div>
+            <div class="column is-6">
+              <img src="./images/Tome_1-Lesson_1-Dialogue_B.png" alt="">
+            </div>
+            <div class="column is-6">
+              <p class="hant">
+                馬丁:早!你們好!<br>
+                中平:你好!你叫什麼名字?<br>
+                馬丁:我叫馬丁。你呢?<br>
+                中平:我叫王中平,他叫李天,你姓什麼?<br>
+                馬丁:我姓白。你們是不是中國人?<br>
+                中平:是啊!我是北京人,他是上海人。
+              </p>
+            </div>
           </div>
 
-          <div class="dialogue">
-            <h3 class="hant">對話 C、您貴姓?</h3>
-            <h3 class="fra">Dialogue C : Quel est votre nom ?</h3>
-            <p class="hant">在中國:朱力安是在中國做生意的法國商人,張玲是他初次見面的同事。</p>
-            <p class="fra">En Chine : Julien est un homme d'affaires français qui travaille en Chine. Zhang Ling est sa
-            collègue qu'il rencontre pour la première fois.</p>
-            <image src="./images/Tome_1-Lesson_1-Dialogue_C.png" />
-            <p class="hant">
-              朱力安:您好!<br>
-              張 玲:您好!您貴姓?<br>
-              朱力安:我姓朱,您呢?<br>
-              張 玲:我姓張。您是美國人嗎?<br>
-              朱力安:不是,我是法國人。<br>
-              &nbsp;&nbsp;您是哪國人?<br>
-              張 玲:我是中國人。</p>?
+          <div class="dialogue columns is-tablet is-multiline is-centered is-vcentered">
+            <div class="column is-12">
+              <h3 class="title hant is-inline-block">對話 C、您貴姓?</h3>
+              <h3 class="title fra is-inline-block">Dialogue C : Quel est votre nom ?</h3>
+              <p class="subtitle hant">在中國:朱力安是在中國做生意的法國商人,張玲是他初次見面的同事。</p>
+              <p class="subtitle fra">En Chine : Julien est un homme d'affaires français qui travaille en Chine. Zhang Ling est sa
+              collègue qu'il rencontre pour la première fois.</p>
+            </div>
+            <div class="column is-6">
+              <img src="./images/Tome_1-Lesson_1-Dialogue_C.png" alt="">
+            </div>
+            <div class="column is-6">
+              <p class="hant">
+                朱力安:您好!<br>
+                張 玲:您好!您貴姓?<br>
+                朱力安:我姓朱,您呢?<br>
+                張 玲:我姓張。您是美國人嗎?<br>
+                朱力安:不是,我是法國人。<br>
+                &nbsp;&nbsp;您是哪國人?<br>
+                張 玲:我是中國人。</p>
+            </div>
           </div>
-
+        </div>
       </section>
 
-      <section id="main-right" class="column is-2 px-1 pt-1 pb-0 tile has-background-light"></section>
       <script></script>
 
     </main>
