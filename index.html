@@ -48,7 +48,7 @@
     </style>
     <nav class="navbar has-shadow">
       <!-- NAVBAR BASE: while on small devices-->
-      <div class="navbar-brand">
+      <div class="navbar-brand is-size-6">
         <!-- LOGO AND NAME -->
         <a id="appLogo" class="navbar-item" href="./">
           <i class="icon unicorn" style="margin-right: 0.2rem !important;"></i>
@@ -73,7 +73,7 @@
       </div>
 
       <!-- NAVBAR ADDON: while on large devices-->
-      <div id="navbar-menu" class="navbar-menu">
+      <div id="navbar-menu" class="navbar-menu is-size-6">
         <!-- Aligned LEFT tabs/menus -->
         <div class="navbar-start">
           <a id="btnAbout" class="navbar-item"><span class="icon"><i class="fa fa-users"></i></span> <span>Crédits</span></a>
@@ -87,6 +87,13 @@
           <a class="navbar-item is-hidden-touch" href="https://twitter.com/intent/tweet?text=Je%20teste%20Chinois-Sans-Frontière.%0ahttps:%2F%2Fhugolpz.github.io%2FCSF%2F&amp;via=Github%20@hugo_lz&amp;hashtags=Chinois" target="_blank">
             <span class="icon" style="color: #55acee;"><i class="fab fa-lg fa-twitter fa-w-16"></i></span>
           </a>
+          <div class="navbar-item">
+            <p class="control">
+              <a class="button is-primary" style="height: 2.25em; padding: calc(.375em - 1px) .75em;" href="">
+                <strong>Download</strong>
+              </a>
+            </p>
+          </div>
         </div><!-- /navbar-end -->
       </div><!-- /navbar-menu -->
     </nav>
@@ -398,8 +405,8 @@
           .vocabulary table.is-minimal tr *:nth-child(3) { display: none; }
 
           _vocabulary thead { background-color: #BBBBBBFF; }
-          .vocabulary table.is-minimal tbody tr:nth-child(even) { background-color: #FFFFFF88; }
-          .vocabulary table.is-minimal tbody tr:nth-child(odd) { background: #EEEEEE66; }
+          .vocabulary table tbody tr:nth-child(even) { background-color: #FFFFFF88; }
+          .vocabulary table tbody tr:nth-child(odd) { background: #EEEEEE66; }
           </style>
 
           <h2 class="title is-2 hant is-inline-block">二、生詞</h2>
@@ -471,24 +478,24 @@
 
             var list= getListFromHtmlEl('T1L1B') ;
             var dict= getDictionarySample(list,dictionary);
-            var dictHtmlTable = json2Table(dict, 'has-background-orange is-minimal');
+            var dictHtmlTable = json2Table(dict, 'has-background-bluesky is-minimal');
             document.getElementById('T1L1B').insertAdjacentHTML('beforeend',dictHtmlTable);
 
             var list= getListFromHtmlEl('T1L1C') ;
             var dict= getDictionarySample(list,dictionary);
-            var dictHtmlTable = json2Table(dict, 'has-background-orange is-minimal');
+            var dictHtmlTable = json2Table(dict, 'has-background-green is-minimal');
             document.getElementById('T1L1C').insertAdjacentHTML('beforeend',dictHtmlTable);
 
             var list= getListFromHtmlEl('T1L1S') ;
             var dict= getDictionarySample(list,dictionary);
-            var dictHtmlTable = json2Table(dict, 'has-background-orange is-minimal');
+            var dictHtmlTable = json2Table(dict, 'has-background-purple');
             document.getElementById('T1L1S').insertAdjacentHTML('beforeend',dictHtmlTable);
           </script>
 
 
           <h2 class="title is-2 hant is-inline-block">五、聽力理解</h2>
           <h2 class="title is-2 fra is-inline-block">Compréhension orale</h2>
-          <div class="comprehension">
+          <div class="comprehension is-size-5">
               <h3 class="title hant is-inline-block">請注意聆聽對話,把正確的答案圈起來。</h3>
               <h3 class="title fra is-inline-block">Écoutez et choisissez la bonne réponse.</h3>
               <p class="hant">1. 小月姓什麼? a) 田 b) 方 c) 林 d) 白</p>
@@ -508,7 +515,7 @@
           
           <h2 class="title is-2 hant is-inline-block">六、發音練習</h2>
           <h2 class="title is-2 fra is-inline-block">Prononciation</h2>
-          <div class="pronunciation">
+          <div class="pronunciation is-size-5">
             <h3 class="title hant is-inline-block">I) 聲調練習 </h3>
             <h3 class="title fra is-inline-block">Travaillez les tons</h3>
             <p class="subtitle hant">請依照正確聲調讀出以下句子:</p>
@@ -532,7 +539,7 @@
             <p class="phon">*wò shì Fàguòrèn.</p>
           </div>
           
-          <div class="pronunciation">
+          <div class="pronunciation is-size-5">
             <h3 class="title hant is-inline-block">II) 分辨 si 和 shi: 讀讀看 </h3>
             <h3 class="title fra is-inline-block">Différencier « si et shi ». Prononcez les phrases suivantes</h3>
             <p class="hant">1. 十是十,四是四,十四不是四十,四十不是十四,是不是?</p>
