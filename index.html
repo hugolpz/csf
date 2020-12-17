@@ -401,8 +401,8 @@
           .has-background-bluesea { background: #2160C4 } /* -link-dark */
           .has-background-greengrass { background: #257942 } /* -success-dark */
 
-          .vocabulary table.is-minimal tr *:nth-child(1) { display: none;}
-          .vocabulary table.is-minimal tr *:nth-child(3) { display: none; }
+          .vocabulary table.is-minimal .lesson { display: none; }
+          .vocabulary table .hans   { display: none; }
 
           _vocabulary thead { background-color: #BBBBBBFF; }
           .vocabulary table tbody tr:nth-child(even) { background-color: #FFFFFF88; }
@@ -432,18 +432,17 @@
           <script>
             function json2Table(json, optionalClasses, titles) {
               optionalClasses = optionalClasses || 'has-background-success',
-              titles = titles || ['Leçon','Chinois','Simp.', 'Pinyin', 'Définition'];
-              let cols = Object.keys(json[0]);
-              let headers = 
-                titles? '<th>'+titles.join('</th><th>')+'</th>'
-                :cols
-                  .map(col => `<th>${col}</th>`)
+              // let cols = Object.keys(json[0]);
+              titlesClasses = [ 'num', 'lesson', 'hant', 'hans', 'phon', 'fra'],
+              titles = titles || ['#','Leçon','Chinois','Simp.', 'Pinyin', 'Définition'];
+              let headers = titles
+                  .map((col,i) => `<th class="${titlesClasses[i]}">${titles[i]}</th>`)
                   .join("");
 
               let rows = json
-                .map(row => {
-                  let tds = cols.map(col => `<td class="${col}">${row[col]}</td>`).join("");
-                  return `<tr>${tds}</tr>`;
+                .map((row,num) => {
+                  let tds = titles.map((col,i) => `<td class="${titlesClasses[i]}">${i==0?num+1:row[titlesClasses[i]=='fra'?'def':titlesClasses[i]]}</td>`).join("");
+                  return `<tr>${tds}</tr>`;//<td class="num">${num+1}</td>
                 })
                 .join("");
                 
