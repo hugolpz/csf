@@ -35,10 +35,9 @@ var pos = [
 { key:"VT", item: "verbe transitif"}
 ];
 /* REGEX ************************************************************
-\n\d+ (.+?) (.+?) (.+?) (.+)
-\n{ lesson:"1.", hant: "$1", hans:"$2", phon:"$3", def:"$4" },
+\n\d+ \n{ lesson:"1.", hant: "$1", hans:"$2", phon:"$3", def:"$4" },
 ****************************************************************** */
-var lexique = [
+var dictionary = [
     { lesson:"1.A", hant: "尼古拉", hans:"尼古拉", phon:"Nígǔlā", def:"Nicolas" },
     { lesson:"1.A", hant: "老師", hans:"老師", phon:"lǎoshī", def:"professeur, enseignant" },
     { lesson:"1.A", hant: "林老師", hans:"林老師", phon:"Lín lǎoshī", def:"Madame/Monsieur Lin (Professeur Lin)" },
