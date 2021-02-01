@@ -19,7 +19,9 @@
 
     <!-- Custom to project -->
     <script src="js/main.js"></script>
-    <script src="js/data.js"></script>
+    <script src="js/lexique.js"></script>
+    <script src="js/texts.js"></script>
+    <script src="js/practices.js"></script>
     <link rel="stylesheet" href="css/main.css" type="text/css">
 
     <!-- PWA TEST -->
@@ -292,6 +294,42 @@
         img.left { float:left; width:50%; margin-right:2em; }
 
 
+        /* Colors: https://bulma.io/documentation/helpers/color-helpers/ */
+        .has-background-brown   { background: brown   }
+        .has-background-orange  { background: orange  }
+        .has-background-bluesky { background: #209CEE } /* -link */
+        .has-background-green   { background: #23D160 } /* -success */
+        .has-background-red     { background: #FF3860 } /* -danger */
+        .has-background-purple  { background: purple  }
+        .has-background-bluesea { background: #2160C4 } /* -link-dark */
+        .has-background-greengrass { background: #257942 } /* -success-dark */
+
+      /* Tables ********************************************************* */
+        .vocabulary table.is-minimal .lesson { display: none; }
+        .vocabulary table.is-minimal .hans   { display: none; }
+
+        .vocabulary table tbody tr:nth-child(even) { background-color: #FFFFFF88; }
+        .vocabulary table tbody tr:nth-child(odd) { background: #EEEEEE66; }
+
+        /* Pratices ******************************************************* */
+        div ul:nth-child(1):before,
+        div ol:nth-child(1):before { content:"1."; width: 2em; }
+        div ul:nth-child(2):before,
+        div ol:nth-child(2):before { content:"2."; width: 2em; }
+        div ul:nth-child(3):before,
+        div ol:nth-child(3):before { content:"3."; width: 2em; }
+        div ul:nth-child(4):before,
+        div ol:nth-child(4):before { content:"4."; width: 2em; }
+
+        ol li:nth-child(1):before { content:"a)"; width: 2em; }
+        ol li:nth-child(2):before { content:"b)"; width: 2em; }
+        ol li:nth-child(3):before { content:"c)"; width: 2em; }
+        ol li:nth-child(4):before { content:"d)"; width: 2em; }
+        ol li:nth-child(5):before { content:"e)"; width: 2em; }
+        ol li:nth-child(6):before { content:"f)"; width: 2em; }
+
+        ul li:before { content:"-"; width: 2em; }
+
         /* Linguistic ****************************************************** */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap');
         .hant { font-family: 'Noto Serif TC', serif; }
@@ -314,251 +352,219 @@
           <h2 class="title is-2 hant is-inline-block">一、對話</h2>
           <h2 class="title is-2 fra is-inline-block">Dialogues</h2>
 
-          <div class="dialogue columns is-tablet is-multiline is-centered is-vcentered">
-            <div class="column is-12">
-              <h3 class="title hant is-inline-block">對話 A、你好</h3>
-              <h3 class="title fra is-inline-block">Dialogue A : Bonjour !</h3>
-              <p class="subtitle hant">
-                <span class="icon has-text-danger">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-                </span>
-                在台灣:尼古拉是一位從法國到台灣學習中文的學生,他在教室裡跟老師談話。</p>
-              <p class="subtitle fra">À Taiwan : Nicolas est un étudiant français qui vit à Taiwan pour apprendre le chinois. Il
-              discute avec sa professeur dans une salle de cours.</p>
-            </div>
-            <div class="column is-6">
-              <img src="./images/Tome_1-Lesson_1-Dialogue_A.png" alt="">
-            </div>
-            <div class="column is-6">
-              <p class="hant is-size-4">
-                <span class="icon is-small has-text-danger">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-                </span>
-                尼古拉:老師好!<br>
-                林老師:你好!你叫什麼名字?<br>
-                尼古拉:我叫尼古拉。<br>
-                林老師:你是哪國人?<br>
-                尼古拉:我是法國人。
-              </p>
-            </div>
-          </div>
-
-          <div class="dialogue columns is-tablet is-multiline is-centered is-vcentered">
-            <div class="column is-12">
-              <h3 class="title hant is-inline-block">對話B、早!</h3>
-              <h3 class="title fra is-inline-block">Dialogue B : Bonjour !</h3>
-              <p class="subtitle hant">在法國:王中平、李天在里昂學法文。一天,他們在大學裡遇到法國學生白馬丁。</p>
-              <p class="subtitle fra">En France : Wang Zhongping et Li Tian sont à Lyon pour apprendre le français. Un jour, ils
-              rencontrent à l'université un étudiant français qui s'appelle Martin Blanc.</p>
-            </div>
-            <div class="column is-6">
-              <img src="./images/Tome_1-Lesson_1-Dialogue_B.png" alt="">
-            </div>
-            <div class="column is-6">
-              <p class="hant is-size-4">
-                馬丁:早!你們好!<br>
-                中平:你好!你叫什麼名字?<br>
-                馬丁:我叫馬丁。你呢?<br>
-                中平:我叫王中平,他叫李天,你姓什麼?<br>
-                馬丁:我姓白。你們是不是中國人?<br>
-                中平:是啊!我是北京人,他是上海人。
-              </p>
-            </div>
-          </div>
-
-          <div class="dialogue columns is-tablet is-multiline is-centered is-vcentered">
-            <div class="column is-12">
-              <h3 class="title hant is-inline-block">對話 C、您貴姓?</h3>
-              <h3 class="title fra is-inline-block">Dialogue C : Quel est votre nom ?</h3>
-              <p class="subtitle hant">在中國:朱力安是在中國做生意的法國商人,張玲是他初次見面的同事。</p>
-              <p class="subtitle fra">En Chine : Julien est un homme d'affaires français qui travaille en Chine. Zhang Ling est sa
-              collègue qu'il rencontre pour la première fois.</p>
-            </div>
-            <div class="column is-6">
-              <img src="./images/Tome_1-Lesson_1-Dialogue_C.png" alt="">
-            </div>
-            <div class="column is-6">
-              <p class="hant is-size-4">
-                朱力安:您好!<br>
-                張 玲:您好!您貴姓?<br>
-                朱力安:我姓朱,您呢?<br>
-                張 玲:我姓張。您是美國人嗎?<br>
-                朱力安:不是,我是法國人。<br>
-                &nbsp;&nbsp;您是哪國人?<br>
-                張 玲:我是中國人。</p>
-            </div>
-          </div>
-
-
-          <style>
-          /* Colors: https://bulma.io/documentation/helpers/color-helpers/ */
-          .has-background-brown   { background: brown   }
-          .has-background-orange  { background: orange  }
-          .has-background-bluesky { background: #209CEE } /* -link */
-          .has-background-green   { background: #23D160 } /* -success */
-          .has-background-red     { background: #FF3860 } /* -danger */
-          .has-background-purple  { background: purple  }
-          .has-background-bluesea { background: #2160C4 } /* -link-dark */
-          .has-background-greengrass { background: #257942 } /* -success-dark */
-
-          .vocabulary table.is-minimal .lesson { display: none; }
-          .vocabulary table .hans   { display: none; }
-
-          _vocabulary thead { background-color: #BBBBBBFF; }
-          .vocabulary table tbody tr:nth-child(even) { background-color: #FFFFFF88; }
-          .vocabulary table tbody tr:nth-child(odd) { background: #EEEEEE66; }
-          </style>
+          <div id="T1L1TA" class="text"></div> 
+          <div id="T1L1TB" class="text"></div> 
+          <div id="T1L1TC" class="text"></div> 
 
           <h2 class="title is-2 hant is-inline-block">二、生詞</h2>
           <h2 class="title is-2 fra is-inline-block">Vocabulaire</h2>
           
-          <div id="T1L1A" class="vocabulary" data-list='尼古拉,老師,林老師,好,你好,你,叫,什麼,名字,我,是,哪國人,法國,法國人'>
+          <div id="T1L1VA" class="vocabulary" 
+            data-list='尼古拉,老師,林老師,好,你好,你,叫,什麼,名字,我,是,哪國人,法國,法國人' 
+            data-class='has-background-orange is-minimal'>
             <h3 class="title hant is-inline-block">對話 A、你好 !</h3>
-            <h3 class="title fra is-inline-block"> Dialogue A:Bonjour !</h3>
+            <h3 class="title fra is-inline-block">Dialogue A : Bonjour !</h3>
+          </div>
+
+          <div id="T1L1VB" class="vocabulary" 
+            data-list='馬丁,中平,早,你們,你呢?,王,他,李天,姓,白,是不是,中國,中國人,啊,北京,北京人,上海,上海人' 
+            data-class='has-background-bluesky is-minimal'>
+            <h3 class="title hant is-inline-block">對話B、 早 !</h3>
+            <h3 class="title fra is-inline-block">Dialogue B : Bonjour !</h3>
           </div>
           
-          <h3 class="title hant is-inline-block">對話B、 早 !</h3>
-          <h3 class="title fra is-inline-block"> Dialogue B:Bonjour !</h3>
-          <div id="T1L1B" class="vocabulary" data-list='馬丁,中平,早,你們,你呢?,王,他,李天,姓,白,是不是,中國,中國人,啊,北京,北京人,上海,上海人'></div>
-          
-          <h3 class="title hant is-inline-block">對話 C、您貴姓</h3>
-          <h3 class="title fra is-inline-block"> Dialogue C:Quel est votre nom ?</h3>
-          <div id="T1L1C" class="vocabulary" data-list='朱力安,張玲,您,貴姓,朱,呢,張,美國,美國人,嗎,不是,日本,日本人'></div>
-          
-          <h3 class="title hant is-inline-block">一般練習生詞</h3>
-          <h3 class="title fra is-inline-block"> Vocabulaire supplémentaire</h3>
-          <div id="T1L1S" class="vocabulary" data-list='詞,第一課,段,漢字,解釋,課,課文,練習,例子,拼音,商人,生詞,台灣,聽力,晚,晚上,新加坡,學,學生,英國,語法'></div>
-
-          <script>
-            function json2Table(json, optionalClasses, titles) {
-              optionalClasses = optionalClasses || 'has-background-success',
-              // let cols = Object.keys(json[0]);
-              titlesClasses = [ 'num', 'lesson', 'hant', 'hans', 'phon', 'fra'],
-              titles = titles || ['#','Leçon','Chinois','Simp.', 'Pinyin', 'Définition'];
-              let headers = titles
-                  .map((col,i) => `<th class="${titlesClasses[i]}">${titles[i]}</th>`)
-                  .join("");
-
-              let rows = json
-                .map((row,num) => {
-                  let tds = titles.map((col,i) => `<td class="${titlesClasses[i]}">${i==0?num+1:row[titlesClasses[i]=='fra'?'def':titlesClasses[i]]}</td>`).join("");
-                  return `<tr>${tds}</tr>`;//<td class="num">${num+1}</td>
-                })
-                .join("");
-                
-              //build the table
-              const table = `
-              <table class="table ${optionalClasses} is-fullwidth is-size-5">
-                <thead>
-                  <tr>${headers}</tr>
-                <thead>
-                <tbody>
-                  ${rows}
-                <tbody>
-              <table>`;
-
-              return table;
-            }
-
-            var getListFromHtmlEl = function(targetId) { 
-              res = document.getElementById(targetId).getAttribute("data-list").split(',');
-              return res;
-             } 
-            var getDictionarySample= function(list,dictionary) {
-              var res = [];
-              list.forEach(word => res.push( dictionary.find(item => item.hant===word) ));
-              return res;
-            }
-
-            var list= getListFromHtmlEl('T1L1A') ;
-            var dict= getDictionarySample(list,dictionary);
-            var dictHtmlTable = json2Table(dict, 'has-background-orange is-minimal');
-            document.getElementById('T1L1A').insertAdjacentHTML('beforeend',dictHtmlTable);
-
-            var list= getListFromHtmlEl('T1L1B') ;
-            var dict= getDictionarySample(list,dictionary);
-            var dictHtmlTable = json2Table(dict, 'has-background-bluesky is-minimal');
-            document.getElementById('T1L1B').insertAdjacentHTML('beforeend',dictHtmlTable);
-
-            var list= getListFromHtmlEl('T1L1C') ;
-            var dict= getDictionarySample(list,dictionary);
-            var dictHtmlTable = json2Table(dict, 'has-background-green is-minimal');
-            document.getElementById('T1L1C').insertAdjacentHTML('beforeend',dictHtmlTable);
-
-            var list= getListFromHtmlEl('T1L1S') ;
-            var dict= getDictionarySample(list,dictionary);
-            var dictHtmlTable = json2Table(dict, 'has-background-purple');
-            document.getElementById('T1L1S').insertAdjacentHTML('beforeend',dictHtmlTable);
-          </script>
+          <div id="T1L1VC" class="vocabulary" 
+            data-list='朱力安,張玲,您,貴姓,朱,呢,張,美國,美國人,嗎,不是,日本,日本人' 
+            data-class='has-background-green is-minimal'>
+            <h3 class="title hant is-inline-block">對話 C、您貴姓</h3>
+            <h3 class="title fra is-inline-block">Dialogue C : Quel est votre nom ?</h3>
+          </div>
+            
+          <div id="T1L1VS" class="vocabulary" 
+            data-list='詞,第一課,段,漢字,解釋,課,課文,練習,例子,拼音,商人,生詞,台灣,聽力,晚,晚上,新加坡,學,學生,英國,語法' 
+            data-class='has-background-purple is-minimal'>
+            <h3 class="title hant is-inline-block">一般練習生詞</h3>
+            <h3 class="title fra is-inline-block">Vocabulaire supplémentaire</h3>
+          </div>
 
 
           <h2 class="title is-2 hant is-inline-block">五、聽力理解</h2>
           <h2 class="title is-2 fra is-inline-block">Compréhension orale</h2>
+          <div id="T1L1P1">
+          </div>
+
+
           <div class="comprehension is-size-5">
-              <h3 class="title hant is-inline-block">請注意聆聽對話,把正確的答案圈起來。</h3>
-              <h3 class="title fra is-inline-block">Écoutez et choisissez la bonne réponse.</h3>
-              <p class="hant">1. 小月姓什麼? a) 田 b) 方 c) 林 d) 白</p>
-              <p class="fra">Quel est le nom de famille de Xiaoyue ? a) Tian b) Fang c) Lin d) Bai</p>
-              <p class="hant">2. 安娜姓什麼? a) 田 b) 方 c) 林 d) 白</p>
-              <p class="fra">Quel est le nom de famille d'Anna ? a) Tian b) Fang c) Lin d) Bai</p>
-              <p class="hant">3. 小月問安娜是哪國來的人? a) 英國 b) 美國 c) 德國 d) 法國</p>
-              <p class="fra">Xiaoyue demande de quel pays est Anna ?</p>
-              <p class="fra">a) Angleterre b) États-Unis c) Allemagne d) France</p>
-              <p class="hant">4. 安娜回答小月她是哪國人? a) 英國人 b) 美國人 c) 德國人 d) 法國人</p>
-              <p class="fra">Anna a répondu qu’elle est de nationalité</p>
-              <p class="fra">a) anglaise b) américaine c) allemande d) française</p>
-              <p class="hant">5. 小月是老師嗎? a) 是 b) 不 c) 不知道</p>
-              <p class="fra">Est-ce que Xiaoyue est professeur ?</p>
-              <p class="fra">a) Oui b) Non c) On ne sait pas</p>
-            </div>
-          
-          <h2 class="title is-2 hant is-inline-block">六、發音練習</h2>
-          <h2 class="title is-2 fra is-inline-block">Prononciation</h2>
-          <div class="pronunciation is-size-5">
-            <h3 class="title hant is-inline-block">I) 聲調練習 </h3>
-            <h3 class="title fra is-inline-block">Travaillez les tons</h3>
-            <p class="subtitle hant">請依照正確聲調讀出以下句子:</p>
-            <p class="subtitle fra">Prononcez cette phrase en respectant les tons :</p>
-            <p class="hant">我是法國人。</p>
-            <p class="phon">Wǒ shì Fǎguórén.</p>
-            <p class="fra">3 4 3 2 2</p>
-          
-            <p class="subtitle hant">請以第一聲念出下面這句子:</p>
-            <p class="subtitle fra">Prononcez cette phrase en mettant le premier ton sur tous les mots :</p>
-            <p class="hant">>我是法國人。</p>
-            <p class="phon">*wō shī Fāguōrēn.</p>
-            <p class="subtitle hant">請以第二聲念出下面這句子</p>
-            <p class="subtitle fra">Au deuxième ton :</p>
-            <p class="phon">*wó shí Fáguórén.</p>
-            <p class="subtitle hant">請以第三聲念出下面這句子</p>
-            <p class="subtitle fra">Au troisième ton :</p>
-            <p class="phon">*wǒ shǐ Fǎguǒrěn.</p>
-            <p class="subtitle hant">請以第四聲念出下面這句子</p>
-            <p class="subtitle fra">Au quatrième ton :</p>
-            <p class="phon">*wò shì Fàguòrèn.</p>
+            <h3 class="title hant is-inline-block">請注意聆聽對話,把正確的答案圈起來。</h3>
+            <h3 class="title fra is-inline-block">Écoutez et choisissez la bonne réponse.</h3>
+            <p class="hant">1. 小月姓什麼? a) 田 b) 方 c) 林 d) 白</p>
+            <p class="fra">Quel est le nom de famille de Xiaoyue ? a) Tian b) Fang c) Lin d) Bai</p>
+            <p class="hant">2. 安娜姓什麼? a) 田 b) 方 c) 林 d) 白</p>
+            <p class="fra">Quel est le nom de famille d'Anna ? a) Tian b) Fang c) Lin d) Bai</p>
+            <p class="hant">3. 小月問安娜是哪國來的人? a) 英國 b) 美國 c) 德國 d) 法國</p>
+            <p class="fra">Xiaoyue demande de quel pays est Anna ?</p>
+            <p class="fra">a) Angleterre b) États-Unis c) Allemagne d) France</p>
+            <p class="hant">4. 安娜回答小月她是哪國人? a) 英國人 b) 美國人 c) 德國人 d) 法國人</p>
+            <p class="fra">Anna a répondu qu’elle est de nationalité</p>
+            <p class="fra">a) anglaise b) américaine c) allemande d) française</p>
+            <p class="hant">5. 小月是老師嗎? a) 是 b) 不 c) 不知道</p>
+            <p class="fra">Est-ce que Xiaoyue est professeur ?</p>
+            <p class="fra">a) Oui b) Non c) On ne sait pas</p>
           </div>
           
+          <h2 class="title is-2 hant is-inline-block">六、發音練習</h2>
+          <h2 class="title is-2 fra is-inline-block">Prononciation</h2>      
           <div class="pronunciation is-size-5">
             <h3 class="title hant is-inline-block">II) 分辨 si 和 shi: 讀讀看 </h3>
             <h3 class="title fra is-inline-block">Différencier « si et shi ». Prononcez les phrases suivantes</h3>
             <p class="hant">1. 十是十,四是四,十四不是四十,四十不是十四,是不是?</p>
             <p class="phon">shí shì shí, sì shì sì, shísì búshì sìshí, sìshí búshì shísì, shì bú shì ?</p>
-            <p class="fra">Dix est bien dix, quatre est bien quatre, quatorze n’est pas quarante, quarante n’est pas
-            quatorze, n’est-ce pas ?</p>
+            <p class="fra">Dix est bien dix, quatre est bien quatre, quatorze n’est pas quarante, quarante n’est pas quatorze, n’est-ce pas ?</p>
             <p class="hant">2. 門外有四十四隻獅子,不知是四十四隻死獅子,還是四十四隻石獅子。</p>
             <p class="phon">ménwài yǒu sìshísìzhī shīzi, bùzhī shì sìshísìzhī sǐshīzi, háishì sìshísìzhī shíshīzi.</p>
-            <p class="fra">Il y a quarante-quatre lions à la porte. On ne sait pas s’il s’agit de quarante-quatre lions
-            morts, ou de quarante-quatre lions de pierre.</p>
+            <p class="fra">Il y a quarante-quatre lions à la porte. On ne sait pas s’il s’agit de quarante-quatre lions morts, ou de quarante-quatre lions de pierre.</p>
           </div>
-
-
 
 
         </div>
 
       </section>
 
-      <script>
+<script>
+var practiceDataToTemplate = function(obj) {
+  var lesson = obj.lesson,
+    section = obj.section,
+    titleHan = obj.titleHan,
+    titleFra = obj.titleFra,
+    guidelineHan = obj.guidelineHan,
+    guidelineFra = obj.guidelineFra,
+    practiceHan = obj.practiceHan,
+    practiceFra = obj.practiceFra,
+    text = obj.text;
+  return `<div class="practice columns is-tablet is-multiline is-centered is-vcentered">
+  <div class="column is-12">
+    <h3 class="title hant is-inline-block"> ${titleHan} </h3>
+    <h3 class="title fra is-inline-block"> ${titleFra} </h3>
+    <p class="subtitle hant">${guidelineHan}</p>
+    <p class="subtitle fra"> ${guidelineFra}</p>
+  </div>
+  <div class="column is-6"><p class="is-size-4">${practiceHan}</p></div>
+  <div class="column is-6"><p class="fra">${practiceFra}</p>
+  </div>
+</div>`;
+};
+const practiceHooks = document.querySelectorAll('.practice');
+practiceHooks.forEach(el => {
+  var lesson = el.id[3],
+    section = el.id[5];
+  obj = texts.filter(function(item) {
+    return item.lesson == lesson && item.section == section
+  });
+  document.getElementById(el.id).innerHTML = textDataToTemplate(obj[0]);
+})
+
+
+
+var textDataToTemplate = function(obj) {
+  var lesson = obj.lesson,
+    section = obj.section,
+    titleHan = obj.titleHan,
+    titleFra = obj.titleFra,
+    guidelineHan = obj.guidelineHan,
+    guidelineFra = obj.guidelineFra,
+    text = obj.text;
+  return `<div class="dialogue columns is-tablet is-multiline is-centered is-vcentered">
+  <div class="column is-12">
+    <h3 class="title hant is-inline-block"> ${titleHan} </h3>
+    <h3 class="title fra is-inline-block"> ${titleFra} </h3>
+    <p class="subtitle hant">
+      <span class="icon has-text-danger">
+        <i class="fas fa-play" aria-hidden="true"></i>
+      </span>
+      ${guidelineHan} </p>
+    <p class="subtitle fra"> ${guidelineFra} </p>
+  </div>
+  <div class="column is-6">
+    <img src="./images/Tome_1-Lesson_${lesson}-Dialogue_${section}.png" alt="">
+  </div>
+  <div class="column is-6">
+    <p class="hant is-size-4"> ${text} </p>
+  </div>
+</div>`;
+};
+const textHooks = document.querySelectorAll('.text');
+textHooks.forEach(el => {
+  var lesson = el.id[3],
+    section = el.id[5];
+  obj = texts.filter(function(item) {
+    return item.lesson == lesson && item.section == section
+  });
+  document.getElementById(el.id).innerHTML = textDataToTemplate(obj[0]);
+})
+
+function json2Table(json, optionalClasses, titles) {
+  optionalClasses = optionalClasses || 'has-background-success',
+    // let cols = Object.keys(json[0]);
+    titlesClasses = ['num', 'lesson', 'hant', 'hans', 'phon', 'fra'],
+    titles = titles || ['#', 'Leçon', 'Chinois', 'Simp.', 'Pinyin', 'Définition'];
+  let headers = titles
+    .map((col, i) => `<th class="${titlesClasses[i]}">${titles[i]}</th>`)
+    .join("");
+
+  let rows = json
+    .map((row, num) => {
+      let tds = titles.map((col, i) => `<td class="${titlesClasses[i]}">${i==0?num+1:row[titlesClasses[i]=='fra'?'def':titlesClasses[i]]}</td>`).join("");
+      return `<tr>${tds}</tr>`; //<td class="num">${num+1}</td>
+    })
+    .join("");
+
+  //build the table
+  const table = `
+<table class="table ${optionalClasses} is-fullwidth is-size-5">
+  <thead>
+    <tr>${headers}</tr>
+  <thead>
+  <tbody>
+    ${rows}
+  <tbody>
+<table>`;
+  return table;
+}
+
+const vocabularyHooks = document.querySelectorAll('.vocabulary');
+vocabularyHooks.forEach(el => {
+  var lesson = el.id[3],
+    section = el.id[5];
+  var list = el.getAttribute("data-list").split(','),
+    classes = el.getAttribute("data-class");
+  var dict = [];
+  list.forEach(word => dict.push(dictionary.find(item => item.hant === word)));
+  var dictHtmlTable = json2Table(dict, classes);
+  document.getElementById(el.id).insertAdjacentHTML('beforeend', dictHtmlTable);
+})
+
+
+/* *************************************************************** */
+/* Audios ******************************************************** */
+var audioCurrent = new Audio("url");
+var playString = function(str) {
+	audioCurrent.pause();
+  audioCurrent.src = 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/96k/hsk/cmn-' + str + '.mp3';
+  audioCurrent.src = 'https://github.com/hugolpz/audio-cmn/raw/master/96k/hsk/cmn-' + str + '.mp3';
+  audioCurrent.src='https://translate.google.com/translate_tts?ie=UTF-8&idx=0&client=tw-ob&tl=zh-TW&q=' + str;
+  audioCurrent.play();
+  console.log(audioCurrent.src);
+};
+const lis = document.querySelectorAll('.hant');
+lis.forEach(li => {
+  li.addEventListener('click', (li) => {
+    re = /[abcd]\) (.+)。/;
+    str = li.target.textContent.replace(re, '$1');
+    console.log(str);
+    playString(str);
+  })
+})
+
       </script>
 
 
