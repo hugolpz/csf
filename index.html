@@ -295,14 +295,14 @@
 
 
         /* Colors: https://bulma.io/documentation/helpers/color-helpers/ */
-        .has-background-brown   { background: brown   }
-        .has-background-orange  { background: orange  }
+        .has-background-red     { background: #FF3860 } /* -danger */
         .has-background-bluesky { background: #209CEE } /* -link */
         .has-background-green   { background: #23D160 } /* -success */
-        .has-background-red     { background: #FF3860 } /* -danger */
+        .has-background-pink    { background: pink    }
         .has-background-purple  { background: purple  }
         .has-background-bluesea { background: #2160C4 } /* -link-dark */
         .has-background-greengrass { background: #257942 } /* -success-dark */
+        .has-background-orange  { background: orange  }
 
       /* Tables ********************************************************* */
         .vocabulary table.is-minimal .lesson { display: none; }
@@ -347,86 +347,349 @@
 
       </style>
       <section id="main-center" class="column is-8 px-6 pt-6 pb-6 tile has-background-white">
-        <div id="T1L1">
 
+
+        <div id="T1L1">
           <h2 class="title is-2 hant is-inline-block">一、對話</h2>
           <h2 class="title is-2 fra is-inline-block">Dialogues</h2>
-
+        
           <div id="T1L1TA" class="text"></div> 
           <div id="T1L1TB" class="text"></div> 
-          <div id="T1L1TC" class="text"></div> 
-
-          <h2 class="title is-2 hant is-inline-block">二、生詞</h2>
-          <h2 class="title is-2 fra is-inline-block">Vocabulaire</h2>
-          
-          <div id="T1L1VA" class="vocabulary" 
-            data-list='尼古拉,老師,林老師,好,你好,你,叫,什麼,名字,我,是,哪國人,法國,法國人' 
-            data-class='has-background-orange is-minimal'>
-            <h3 class="title hant is-inline-block">對話 A、你好 !</h3>
-            <h3 class="title fra is-inline-block">Dialogue A : Bonjour !</h3>
-          </div>
-
-          <div id="T1L1VB" class="vocabulary" 
-            data-list='馬丁,中平,早,你們,你呢?,王,他,李天,姓,白,是不是,中國,中國人,啊,北京,北京人,上海,上海人' 
-            data-class='has-background-bluesky is-minimal'>
-            <h3 class="title hant is-inline-block">對話B、 早 !</h3>
-            <h3 class="title fra is-inline-block">Dialogue B : Bonjour !</h3>
-          </div>
-          
-          <div id="T1L1VC" class="vocabulary" 
-            data-list='朱力安,張玲,您,貴姓,朱,呢,張,美國,美國人,嗎,不是,日本,日本人' 
-            data-class='has-background-green is-minimal'>
-            <h3 class="title hant is-inline-block">對話 C、您貴姓</h3>
-            <h3 class="title fra is-inline-block">Dialogue C : Quel est votre nom ?</h3>
-          </div>
+          <div id="T1L1TC" class="text"></div>
+        
+            <div id="T1L1VA" class="vocabulary" 
+                data-list="尼古拉,老師,林老師,好,你好,你,叫,什麼,名字,我,是,哪國人,法國,法國人" 
+                data-class='has-background-red is-minimal'>
+                <h3 class="title hant is-inline-block">對話 A、你好 !</h3>
+                <h3 class="title fra is-inline-block">Dialogue A : Bonjour ! </h3>
+            </div>
+        
+            <div id="T1L1VB" class="vocabulary" 
+                data-list="馬丁,中平,早,你們,你呢?,王,他,李天,姓,白,是不是,中國,中國人,啊,北京,北京人,上海,上海人" 
+                data-class='has-background-red is-minimal'>
+                <h3 class="title hant is-inline-block">對話B、 早 !</h3>
+                <h3 class="title fra is-inline-block">Dialogue B : Bonjour !</h3>
+            </div>
+        
+            <div id="T1L1VC" class="vocabulary" 
+                data-list="朱力安,張玲,您,貴姓,朱,呢,張,美國,美國人,嗎,不是,日本,日本人" 
+                data-class='has-background-red is-minimal'>
+                <h3 class="title hant is-inline-block">對話 C、您貴姓</h3>
+                <h3 class="title fra is-inline-block">Dialogue C : Quel est votre nom ?</h3>
+            </div>
+        
+            <div id="T1L1VS" class="vocabulary" 
+                data-list="詞,第一課,段,漢字,解釋,課,課文,練習,例子,拼音,商人,生詞,台灣,聽力,晚,晚上,新加坡,學,學生,英國,語法,早上" 
+                data-class='has-background-red is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L1VES" class="vocabulary" 
+                data-list="瑪丹娜,歌手,德國,畢卡索,西班牙,畫家,村上春樹,作家" 
+                data-class='has-background-red is-minimal'>
+                <h3 class="title hant is-inline-block">一般練習生詞</h3>
+                <h3 class="title fra is-inline-block">Vocabulaire supplémentaire</h3>
+            </div>
+        
+        
+            <h2 class="title is-2 hant is-inline-block">五、聽力理解</h2>
+            <h2 class="title is-2 fra is-inline-block">Compréhension orale</h2>
+        
+        
+            <div class="comprehension is-size-5">
+                <h3 class="title hant is-inline-block">請注意聆聽對話,把正確的答案圈起來。</h3>
+                <h3 class="title fra is-inline-block">Écoutez et choisissez la bonne réponse.</h3>
+                <p class="hant">1. 小月姓什麼? a) 田 b) 方 c) 林 d) 白</p>
+                <p class="fra">Quel est le nom de famille de Xiaoyue ? a) Tian b) Fang c) Lin d) Bai</p>
+                <p class="hant">2. 安娜姓什麼? a) 田 b) 方 c) 林 d) 白</p>
+                <p class="fra">Quel est le nom de famille d'Anna ? a) Tian b) Fang c) Lin d) Bai</p>
+                <p class="hant">3. 小月問安娜是哪國來的人? a) 英國 b) 美國 c) 德國 d) 法國</p>
+                <p class="fra">Xiaoyue demande de quel pays est Anna ?</p>
+                <p class="fra">a) Angleterre b) États-Unis c) Allemagne d) France</p>
+                <p class="hant">4. 安娜回答小月她是哪國人? a) 英國人 b) 美國人 c) 德國人 d) 法國人</p>
+                <p class="fra">Anna a répondu qu’elle est de nationalité</p>
+                <p class="fra">a) anglaise b) américaine c) allemande d) française</p>
+                <p class="hant">5. 小月是老師嗎? a) 是 b) 不 c) 不知道</p>
+                <p class="fra">Est-ce que Xiaoyue est professeur ?</p>
+                <p class="fra">a) Oui b) Non c) On ne sait pas</p>
+            </div>
             
-          <div id="T1L1VS" class="vocabulary" 
-            data-list='詞,第一課,段,漢字,解釋,課,課文,練習,例子,拼音,商人,生詞,台灣,聽力,晚,晚上,新加坡,學,學生,英國,語法' 
-            data-class='has-background-purple is-minimal'>
-            <h3 class="title hant is-inline-block">一般練習生詞</h3>
-            <h3 class="title fra is-inline-block">Vocabulaire supplémentaire</h3>
-          </div>
-
-
-          <h2 class="title is-2 hant is-inline-block">五、聽力理解</h2>
-          <h2 class="title is-2 fra is-inline-block">Compréhension orale</h2>
-          <div id="T1L1P1">
-          </div>
-
-
-          <div class="comprehension is-size-5">
-            <h3 class="title hant is-inline-block">請注意聆聽對話,把正確的答案圈起來。</h3>
-            <h3 class="title fra is-inline-block">Écoutez et choisissez la bonne réponse.</h3>
-            <p class="hant">1. 小月姓什麼? a) 田 b) 方 c) 林 d) 白</p>
-            <p class="fra">Quel est le nom de famille de Xiaoyue ? a) Tian b) Fang c) Lin d) Bai</p>
-            <p class="hant">2. 安娜姓什麼? a) 田 b) 方 c) 林 d) 白</p>
-            <p class="fra">Quel est le nom de famille d'Anna ? a) Tian b) Fang c) Lin d) Bai</p>
-            <p class="hant">3. 小月問安娜是哪國來的人? a) 英國 b) 美國 c) 德國 d) 法國</p>
-            <p class="fra">Xiaoyue demande de quel pays est Anna ?</p>
-            <p class="fra">a) Angleterre b) États-Unis c) Allemagne d) France</p>
-            <p class="hant">4. 安娜回答小月她是哪國人? a) 英國人 b) 美國人 c) 德國人 d) 法國人</p>
-            <p class="fra">Anna a répondu qu’elle est de nationalité</p>
-            <p class="fra">a) anglaise b) américaine c) allemande d) française</p>
-            <p class="hant">5. 小月是老師嗎? a) 是 b) 不 c) 不知道</p>
-            <p class="fra">Est-ce que Xiaoyue est professeur ?</p>
-            <p class="fra">a) Oui b) Non c) On ne sait pas</p>
-          </div>
-          
-          <h2 class="title is-2 hant is-inline-block">六、發音練習</h2>
-          <h2 class="title is-2 fra is-inline-block">Prononciation</h2>      
-          <div class="pronunciation is-size-5">
-            <h3 class="title hant is-inline-block">II) 分辨 si 和 shi: 讀讀看 </h3>
-            <h3 class="title fra is-inline-block">Différencier « si et shi ». Prononcez les phrases suivantes</h3>
-            <p class="hant">1. 十是十,四是四,十四不是四十,四十不是十四,是不是?</p>
-            <p class="phon">shí shì shí, sì shì sì, shísì búshì sìshí, sìshí búshì shísì, shì bú shì ?</p>
-            <p class="fra">Dix est bien dix, quatre est bien quatre, quatorze n’est pas quarante, quarante n’est pas quatorze, n’est-ce pas ?</p>
-            <p class="hant">2. 門外有四十四隻獅子,不知是四十四隻死獅子,還是四十四隻石獅子。</p>
-            <p class="phon">ménwài yǒu sìshísìzhī shīzi, bùzhī shì sìshísìzhī sǐshīzi, háishì sìshísìzhī shíshīzi.</p>
-            <p class="fra">Il y a quarante-quatre lions à la porte. On ne sait pas s’il s’agit de quarante-quatre lions morts, ou de quarante-quatre lions de pierre.</p>
-          </div>
-
-
+            <div class="pronunciation is-size-5">
+                <h2 class="title is-2 hant is-inline-block">六、發音練習</h2>
+                <h2 class="title is-2 fra is-inline-block">Prononciation</h2>      
+                <div class="pronunciation is-size-5">
+                <h3 class="title hant is-inline-block">II) 分辨 si 和 shi: 讀讀看 </h3>
+                <h3 class="title fra is-inline-block">Différencier « si et shi ». Prononcez les phrases suivantes</h3>
+                <p class="hant">1. 十是十,四是四,十四不是四十,四十不是十四,是不是?</p>
+                <p class="phon">shí shì shí, sì shì sì, shísì búshì sìshí, sìshí búshì shísì, shì bú shì ?</p>
+                <p class="fra">Dix est bien dix, quatre est bien quatre, quatorze n’est pas quarante, quarante n’est pas quatorze, n’est-ce pas ?</p>
+                <p class="hant">2. 門外有四十四隻獅子,不知是四十四隻死獅子,還是四十四隻石獅子。</p>
+                <p class="phon">ménwài yǒu sìshísìzhī shīzi, bùzhī shì sìshísìzhī sǐshīzi, háishì sìshísìzhī shíshīzi.</p>
+                <p class="fra">Il y a quarante-quatre lions à la porte. On ne sait pas s’il s’agit de quarante-quatre lions morts, ou de quarante-quatre lions de pierre.</p>
+            </div>
+        
         </div>
+        
+        
+        <div id="T1L2">
+          <h2 class="title is-2 hant is-inline-block">一、對話</h2>
+          <h2 class="title is-2 fra is-inline-block">Dialogues</h2>
+        
+          <div id="T1L2TA" class="text"></div> 
+          <div id="T1L2TB" class="text"></div> 
+          <div id="T1L2TC" class="text"></div>
+        
+            <div id="T1L2VA" class="vocabulary" 
+                data-list="請問,哪裡,哪裡人_?,巴黎,里昂,大學,可是,的,我的,學校,在" 
+                data-class='has-background-blueshy is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L2VB" class="vocabulary" 
+                data-list="這,書,謝謝,不客氣,家,馬賽,有,幾個,六個人,爸爸,媽媽,一個人,哥哥,兩個人,姊姊,沒有,弟弟,妹妹" 
+                data-class='has-background-blueshy is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L2VC" class="vocabulary" 
+                data-list="好久不見,你好嗎_?,很好,也,最近,忙,累,還,不太…" 
+                data-class='has-background-blueshy is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L2VS" class="vocabulary" 
+                data-list="八,波爾多,陳漢,成都,東京,二,高雄,廣州,或,九,雷恩,里爾,南京,尼斯,七,三,十,史特拉斯堡,四,台北,台東,台南,台中,五,西安,中文" 
+                data-class='has-background-blueshy is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L2VES" class="vocabulary" 
+                data-list="倫敦" 
+                data-class='has-background-blueshy is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        </div>
+        
+        
+        <div id="T1L3">
+          <h2 class="title is-2 hant is-inline-block">一、對話</h2>
+          <h2 class="title is-2 fra is-inline-block">Dialogues</h2>
+        
+          <div id="T1L3TA" class="text"></div> 
+          <div id="T1L3TB" class="text"></div> 
+          <div id="T1L3TC" class="text"></div>
+        
+            <div id="T1L3VA" class="vocabulary" 
+                data-list="下午,要,做,朋友,去,打球,我們,棒球,喜歡,踢足球,都,很多,騎,自行車,還,運動,慢跑,因為,很忙,所以,很少" 
+                data-class='has-background-green is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L3VB" class="vocabulary" 
+                data-list="看,電影,哪國,常;常常,為什麼,這裡,不多,可惜" 
+                data-class='has-background-green is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L3VC" class="vocabulary" 
+                data-list="今天,週末,想,同事,唱歌,聽,音樂,不好聽,平常,喝,啤酒,跟,一起,KTV,下班,見" 
+                data-class='has-background-green is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L3VS" class="vocabulary" 
+                data-list="後,會,家人,來,說,事,小紅,小美,小真" 
+                data-class='has-background-green is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L3VES" class="vocabulary" 
+                data-list="衝浪,釣魚,高爾夫,逛街,籃球,排球,上網,游泳,羽毛球" 
+                data-class='has-background-green is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        </div>
+        
+        
+        <div id="T1L4">
+          <h2 class="title is-2 hant is-inline-block">一、對話</h2>
+          <h2 class="title is-2 fra is-inline-block">Dialogues</h2>
+        
+          <div id="T1L4TA" class="text"></div> 
+          <div id="T1L4TB" class="text"></div> 
+          <div id="T1L4TC" class="text"></div>
+        
+            <div id="T1L4VES" class="vocabulary" 
+                data-list="大,大家,但是,非常,復習,漢學,漢學系,及,介紹,就是,習天和,每天,誰,系,現在,一下,一樣,怎麼,自己" 
+                data-class='has-background-pink is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        </div>
+        
+        
+        <div id="T1L5">
+          <h2 class="title is-2 hant is-inline-block">一、對話</h2>
+          <h2 class="title is-2 fra is-inline-block">Dialogues</h2>
+        
+          <div id="T1L5TA" class="text"></div> 
+          <div id="T1L5TB" class="text"></div> 
+          <div id="T1L5TC" class="text"></div>
+        
+            <div id="T1L5VA" class="vocabulary" 
+                data-list="幾點,兩點,零,上課,下課,吃,晚飯,對不起,半,先,看書,然後,再,打工,那,以後" 
+                data-class='has-background-purlple is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L5VB" class="vocabulary" 
+                data-list="星期,有空,沒有空,早飯,午飯,上午,中午,從…到…,星期一,明天,去年,今年,明年,六月十四日,星期六,小文,生日,派對,星期日,爬山,起床,好嗎_?" 
+                data-class='has-background-purlple is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L5VC" class="vocabulary" 
+                data-list="昨天,好玩,好吃,時間,有時間,吃飯,可以,烤鴨,怎麼樣,聽說,那裡,飯館,菜,公司,門口,見面,行嗎_?,手機,號碼,幾號_?,你的呢_?,沒關係,星期日見" 
+                data-class='has-background-purlple is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L5VS" class="vocabulary" 
+                data-list="報紙,表,餐廳,差,點鐘,分(鐘),公園,過,回家,火車,教室,刻,面,年,日,日期,時候,圖書館,小華,小李,小玲,小王,紙,鐘" 
+                data-class='has-background-purlple is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L5VES" class="vocabulary" 
+                data-list="活動,開車,睡覺" 
+                data-class='has-background-purlple is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        </div>
+        
+        
+        <div id="T1L6">
+          <h2 class="title is-2 hant is-inline-block">一、對話</h2>
+          <h2 class="title is-2 fra is-inline-block">Dialogues</h2>
+        
+          <div id="T1L6TA" class="text"></div> 
+          <div id="T1L6TB" class="text"></div> 
+          <div id="T1L6TC" class="text"></div>
+        
+            <div id="T1L6VA" class="vocabulary" 
+                data-list="買,本,幾本,中文書,知道,書店,附近,找,找一找,後面,前面,還是,需要,一些,筆,筆記,筆記本,文具店,就在,旁邊,要不要,順便,新,新書" 
+                data-class='has-background-bluesea is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L6VB" class="vocabulary" 
+                data-list="老闆,蛋餅,包子,一杯,熱,豆漿,外帶,裡面,等,等一下,一共,多少錢_?,二十五塊,不好意思,零錢,給,一千,找錢,問題,沒問題" 
+                data-class='has-background-bluesea is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L6VC" class="vocabulary" 
+                data-list="店員,歡迎,光臨,歡迎光臨,衣服,覺得,件,這件,紅色,大衣,不錯,小姐,可不可以,試,穿,試穿,當然,跟…來…,試衣間,好看,一點兒,大一點兒,尺寸,這裡,賣,打折,打八折,只,貴,便宜,講價,別的,地方,好_!,走吧_!" 
+                data-class='has-background-bluesea is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L6VS" class="vocabulary" 
+                data-list="杯子,狗,客人,例如,鉛,鉛筆,熱狗,上面,外面,外套,英文,右邊,枝,桌子,左邊" 
+                data-class='has-background-bluesea is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L6VES" class="vocabulary" 
+                data-list="打嘴巴,頂呱呱,孩子,壞,筷子,輛,蘋果,青,雙,上下,條,碗,衣櫃,椅子,元,嘴巴,左右" 
+                data-class='has-background-bluesea is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        </div>
+        
+        
+        <div id="T1L7">
+          <h2 class="title is-2 hant is-inline-block">一、對話</h2>
+          <h2 class="title is-2 fra is-inline-block">Dialogues</h2>
+        
+          <div id="T1L7TA" class="text"></div> 
+          <div id="T1L7TB" class="text"></div> 
+          <div id="T1L7TC" class="text"></div>
+        
+            <div id="T1L7VA" class="vocabulary" 
+                data-list="服務生,菜單,位,過,中國菜,看不懂,能,能不能,肉,魚,雞肉,好久,了,喔,對了,口味,比;比較,酸,甜,酸酸甜甜,味道,辣,點菜,糖醋雞丁,紅燒魚,麻婆豆腐,飲料,香片,馬上,馬上來" 
+                data-class='has-background-greengrass is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L7VB" class="vocabulary" 
+                data-list="買單,沙拉,湯,法式羊小排,蘋果派,黑森林,蛋糕,紅酒,分開,算,各付各的,禮拜,上個禮拜,請吃飯,信用卡,刷信用卡,現金,刷卡,下次" 
+                data-class='has-background-greengrass is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L7VC" class="vocabulary" 
+                data-list="肚子,餓,真想,一頓,又…又…,鹹,四川,四川菜,北方,北方菜,對!,那麼,太,太辣,淡,重,這麼,應該,想到了,君悅,大飯店,自助餐,就" 
+                data-class='has-background-greengrass is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L7VS" class="vocabulary" 
+                data-list="答案,根據,南方,日文,酸辣湯,完,萬,寫" 
+                data-class='has-background-greengrass is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        
+            <div id="T1L7VES" class="vocabulary" 
+                data-list="並,宮保,宮保雞丁,宮保牛肉,瓜,紅燒豆腐,回答,雞丁,咖啡,可樂,苦,苦瓜,苦瓜牛肉,辣椒,辣子,辣子雞丁,牛肉,巧克力,認識,肉絲,如果,燒,酸菜,酸菜肉絲,糖醋雞片,糖醋魚,題目,文章,香腸" 
+                data-class='has-background-greengrass is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        </div>
+        
+        
+        <div id="T1L8">
+          <h2 class="title is-2 hant is-inline-block">一、對話</h2>
+          <h2 class="title is-2 fra is-inline-block">Dialogues</h2>
+        
+          <div id="T1L8TA" class="text"></div> 
+          <div id="T1L8TB" class="text"></div> 
+          <div id="T1L8TC" class="text"></div>
+        
+            <div id="T1L8VES" class="vocabulary" 
+                data-list="地點,綠,綠茶,每個,晚餐,王立,午餐,主語" 
+                data-class='has-background-orange is-minimal'>
+                <h3 class="title hant is-inline-block"></h3>
+                <h3 class="title fra is-inline-block">Dialogue  : </h3>
+            </div>
+        </div>
+
 
       </section>
 
