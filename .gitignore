@@ -1,3 +1,9 @@
 #
 audios/*
 docs/*.pdf
+images/Screenshot*
+images/others
+images/zi
+fonts/*
+indesign
+*.zip
