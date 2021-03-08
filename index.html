@@ -832,7 +832,7 @@ var textDataToTemplate = function(obj) {
     <img src="./images/Tome_1-Lesson_${lesson}-Dialogue_${section}.png" alt="">
   </div>
   <div class="column is-6">
-    <p class="hant is-size-4" audiofile="./audios/L${lesson}-1 Comprehension orale ${section}.mp3">
+    <p class="hant is-size-4" audiofile="L${lesson}-1 Dialogue ${section}.mp3">
       <span class="icon has-text-danger">
         <i class="fas fa-play" aria-hidden="true"></i>
       </span> 
@@ -959,7 +959,7 @@ var practicesDataToHTML = function(obj) {
     <div class="column is-12">
       <h3 class="title hant is-inline-block"> ${titleHan} </h3>
       <h3 class="title fra is-inline-block"> ${titleFra} </h3>
-      <p class="subtitle hant" audiofile="./audios/L${lesson}-1 Comprehension orale ${section}.mp3">
+      <p class="subtitle hant" audiofile="L${lesson}-${lesson==8||lesson==4?1:3} Comprehension orale ${section}.mp3">
         <span class="icon has-text-danger">
           <i class="fas fa-play" aria-hidden="true"></i>
         </span>
@@ -1025,7 +1025,8 @@ hantElements.forEach(hantElement => {
   hantElement.addEventListener('click', (hantElement) => {
     console.log(hantElement);
     textAudioAttr= hantElement.target.attributes['audiofile'];
-    textAudioURL = textAudioAttr? textAudioAttr.value : null;
+    textAudioURL = textAudioAttr? `./audios/${textAudioAttr.value}` : null;
+
     regex = /[abcd]\) (.+)。/;
     wordStr = hantElement.target.textContent.replace(regex, '$1');
     wordAudioURL= `https://github.com/hugolpz/audio-cmn/raw/master/96k/hsk/cmn-${wordStr}.mp3` ||'';
