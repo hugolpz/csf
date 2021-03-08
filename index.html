@@ -362,35 +362,22 @@ var toggleTarget = function(target) {
         .vocabulary table tbody tr:nth-child(odd) { background: #EEEEEE66; }
 
         /* Pratices ******************************************************* */
-        div ul:nth-child(1):before,
-        div ol:nth-child(1):before { content:"1."; width: 2em; }
-        div ul:nth-child(2):before,
-        div ol:nth-child(2):before { content:"2."; width: 2em; }
-        div ul:nth-child(3):before,
-        div ol:nth-child(3):before { content:"3."; width: 2em; }
-        div ul:nth-child(4):before,
-        div ol:nth-child(4):before { content:"4."; width: 2em; }
-
-        ol li:nth-child(1):before { content:"a)"; width: 2em; }
-        ol li:nth-child(2):before { content:"b)"; width: 2em; }
-        ol li:nth-child(3):before { content:"c)"; width: 2em; }
-        ol li:nth-child(4):before { content:"d)"; width: 2em; }
-        ol li:nth-child(5):before { content:"e)"; width: 2em; }
-        ol li:nth-child(6):before { content:"f)"; width: 2em; }
-
-        ul li:before { content:"-"; width: 2em; }
+        
+        div ol { list-style-type: lower-alpha; }
+        li { margin-left: 2em;}
 
         /* Linguistic ****************************************************** */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap');
         .hant { font-family: 'Noto Serif TC', serif; }
-        .hant {
+        p.hant {
           position: relative;
           padding-right:1em;
         }
         .hant .icon {
-          top:0.1em;
+          /*top:0.1em;
           right: 0em;
-          position: absolute;
+          position: absolute;*/
+          pointer-events: none;
         }
         h2.fra,
         h3.fra { color: #FFB000; }
@@ -838,18 +825,19 @@ var textDataToTemplate = function(obj) {
   <div class="column is-12">
     <h3 class="title hant is-inline-block"> ${titleHan} </h3>
     <h3 class="title fra is-inline-block"> ${titleFra} </h3>
-    <p class="subtitle hant"><!--
-      <span class="icon has-text-danger">
-        <i class="fas fa-play" aria-hidden="true"></i>
-      </span> -->
-      ${guidelineHan} </p>
+    <p class="subtitle hant">${guidelineHan} </p>
     <p class="subtitle fra"> ${guidelineFra} </p>
   </div>
   <div class="column is-6">
     <img src="./images/Tome_1-Lesson_${lesson}-Dialogue_${section}.png" alt="">
   </div>
   <div class="column is-6">
-    <p class="hant is-size-4"> ${text} </p>
+    <p class="hant is-size-4" audiofile="./audios/L${lesson}-1 Comprehension orale ${section}.mp3">
+      <span class="icon has-text-danger">
+        <i class="fas fa-play" aria-hidden="true"></i>
+      </span> 
+      ${text}
+    </p>
   </div>
 </div>
   <br clear="all">`;
@@ -864,6 +852,8 @@ textHooks.forEach(el => {
   document.getElementById(el.id).innerHTML = textDataToTemplate(obj[0]);
 });
 
+/* *************************************************************** */
+/* VOCABULARIES ************************************************** */
 function json2Table(json, optionalClasses, titles) {
   optionalClasses = optionalClasses || 'has-background-success',
     // let cols = Object.keys(json[0]);
@@ -873,16 +863,19 @@ function json2Table(json, optionalClasses, titles) {
     .map((col, i) => `<th class="${titlesClasses[i]}">${titles[i]}</th>`)
     .join("");
 
-  let rows = json
+    let rows = json
     .map((row, num) => {
-      let tds = titles.map((col, i) => `<td class="${titlesClasses[i]}">${i==0?num+1:row[titlesClasses[i]=='fra'?'def':titlesClasses[i]]}</td>`).join("");
+      let tds = titles.map((col, i) => `<td class="${titlesClasses[i]}">${(i==0?num+1:titlesClasses[i]=='lesson'? row.lesson+'.'+row.section/* if lesson column : concat row.lesson and row.section */:titlesClasses[i]=='fra'? row.def/* if definition/fra column : pick row.def data */:row[titlesClasses[i]]/* else, use data of that colum i.*/)}</td>`).join("");
       return `<tr>${tds}</tr>`; //<td class="num">${num+1}</td>
     })
     .join("");
 
+  var lesson = json[0].lesson,
+      section= json[0].section;
   //build the table
   const table = `
-<table class="table ${optionalClasses} is-fullwidth is-size-5">
+<table class="table ${optionalClasses} is-fullwidth is-size-5"
+ audio-file="./audios/L${lesson}-${section=='ES'?'5':'2'} Vocabulaire${section=='ES'?'_supplementaire':''}.mp3">
   <thead>
     <tr>${headers}</tr>
   <thead>
@@ -938,15 +931,15 @@ var createElementQuestion = function (data){
        </${listType}>
      </div>
   </div>
-  <br clear="all">`
+  <br clear="all">`;
 }
 
 var processPracticesContent = function(content){
     var type = dataType(content),
-        html=""
+        html="";
     switch (type) {
         case 'string': html=content;break;
-        case 'array of strings': html=content.map(function(item) { return createElementQuestion(item); } ).join();break;
+        case 'array of strings': html=content.map(function(item) { return createElementQuestion(item); } ).join('');break;
         case 'array of objects':break;
 	}
    return html;
@@ -966,7 +959,12 @@ var practicesDataToHTML = function(obj) {
     <div class="column is-12">
       <h3 class="title hant is-inline-block"> ${titleHan} </h3>
       <h3 class="title fra is-inline-block"> ${titleFra} </h3>
-      <p class="subtitle hant">${guidelineHan}</p>
+      <p class="subtitle hant" audiofile="./audios/L${lesson}-1 Comprehension orale ${section}.mp3">
+        <span class="icon has-text-danger">
+          <i class="fas fa-play" aria-hidden="true"></i>
+        </span>
+        ${guidelineHan}
+      </p>
       <p class="subtitle fra">${guidelineFra}</p>
     </div>
     ${objContent}
@@ -1013,19 +1011,25 @@ practiceHooks.forEach(el => {
 /* *************************************************************** */
 /* Audios ******************************************************** */
 var audioCurrent = new Audio("url");
-var playString = function(str) {
+var playString = function(url) {
 	audioCurrent.pause();
-  audioCurrent.src = 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/96k/hsk/cmn-' + str + '.mp3';
-  audioCurrent.src = 'https://github.com/hugolpz/audio-cmn/raw/master/96k/hsk/cmn-' + str + '.mp3';
+  //audioCurrent.src = 'https://raw.githubusercontent.com/hugolpz/audio-cmn/master/96k/hsk/cmn-' + str + '.mp3';
+  audioCurrent.src = url;
   //audioCurrent.src='https://translate.google.com/translate_tts?ie=UTF-8&idx=0&client=tw-ob&tl=zh-TW&q=' + str;
   audioCurrent.play();
   console.log(audioCurrent.src);
 };
-const lis = document.querySelectorAll('.hant');
-lis.forEach(li => {
-  li.addEventListener('click', (li) => {
-    re = /[abcd]\) (.+)。/;
-    str = li.target.textContent.replace(re, '$1');
+
+const hantElements = document.querySelectorAll('.hant');
+hantElements.forEach(hantElement => {
+  hantElement.addEventListener('click', (hantElement) => {
+    console.log(hantElement);
+    textAudioAttr= hantElement.target.attributes['audiofile'];
+    textAudioURL = textAudioAttr? textAudioAttr.value : null;
+    regex = /[abcd]\) (.+)。/;
+    wordStr = hantElement.target.textContent.replace(regex, '$1');
+    wordAudioURL= `https://github.com/hugolpz/audio-cmn/raw/master/96k/hsk/cmn-${wordStr}.mp3` ||'';
+    var str = textAudioURL ? textAudioURL : wordAudioURL;
     console.log(str);
     playString(str);
   })
