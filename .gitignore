@@ -1,10 +1,11 @@
 #
-audios/*
+audios/*.zip
 docs/*.pdf
+images/*copy*.png
 images/Screenshot*
 images/others
 images/zi
 fonts/*
 indesign
 *.zip
-images/*copy*.png
+
