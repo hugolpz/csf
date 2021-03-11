@@ -1,11 +1,11 @@
 #
+indesign
+*.zip
 audios/*.zip
-docs/*.pd
+docs/*
+fonts/*
 images/*copy*.png
 images/Screenshot*
 images/others
 images/zi
-fonts/*
-indesign
-*.zip
 
