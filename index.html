@@ -320,22 +320,32 @@ var toggleTarget = function(target) {
           font-family: "Dosis", sans-serif;
         }
         @font-face {
-          font-family: 'hant';
-          src: /* url('fonts/kaiu.eot'); /* IE9+ Compat Modes * /
-          src: url('fonts/kaiu.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 * /
-              url('fonts/kaiu.woff2') format('woff2'), /* Super modern browsers * /
-              url('fonts/kaiu.woff') format('woff'), /* Modern browsers * /
-              url('fonts/kaiu.svg#kaiu') format('svg'); / * Legacy iOS */
-              url('./fonts/kaiu.ttf')  format('truetype'); /* Safari, Android, iOS */
+          font-family: 'kaishu';
+          src:url('fonts/kaishu/AR_PL_ZenKai_Uni.woff2') format('woff2'),
+              url('fonts/kaishu/AR_PL_ZenKai_Uni.woff') format('woff'),
+              url('fonts/kaishu/AR_PL_ZenKai_Uni.ttf') format('truetype');
+          font-weight: 700;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'zhuyin';
+          src:url('fonts/zhuyin/HanWangKaiMediumChuIn.woff2') format('woff2'),
+              url('fonts/zhuyin/HanWangKaiMediumChuIn.woff') format('woff'),
+              url('fonts/zhuyin/HanWangKaiMediumChuIn.ttf') format('truetype');
+          font-weight: 500;
           font-style: normal;
           font-display: swap;
         }
         .hant,
-        .hant.kaishu {
-          font-family: "hant";
+        .kaishu {
+          font-family: 'kaishu';
         }
-        .hant.zhuyin {
-          font-family: "hant";
+        .zhuyin {
+          font-family: "zhuyin";
+        }
+        .pinyin {
+          font-family: "pinyin";
         }
         
         h3.hant { 
@@ -351,15 +361,13 @@ var toggleTarget = function(target) {
           position: absolute;*/
           pointer-events: none;
         }
-        th { font-family: "Dosis", sans-serif !important;}
         /* **************************************************************** */
         /* LESSONS BOXES ************************************************** */
         .lesson {
           box-sizing: border-box;
           word-break: break-all;
           border: 1px #cecece solid;
-          /*
-					overflow: hidden; */
+          /* overflow: hidden; */
         }
 
         /* Structure ****************************************************** */
@@ -371,7 +379,6 @@ var toggleTarget = function(target) {
           border-bottom: 2px solid #00000022;
           margin-bottom:2em;
         }
-        
         .inline { display:inline-block; }
         img.left { float:left; width:50%; margin-right:2em; }
 
@@ -402,23 +409,23 @@ var toggleTarget = function(target) {
         .has-text-L7 { color: #257942; }
         .has-text-L8 { color: orange; }
 
-
-
       /* Tables ********************************************************* */
-        .vocabulary table.is-minimal .lesson { display: none; }
-        .vocabulary table.is-minimal .hans   { display: none; }
-
         .vocabulary table tbody tr:nth-child(even) { background-color: #FFFFFF88; }
         .vocabulary table tbody tr:nth-child(odd) { background: #EEEEEE66; }
+        
         .vocabulary table tbody tr * { white-space: nowrap }
-        .vocabulary table tbody td:last-child { white-space: none }
+        .vocabulary table.is-minimal .lesson { display: none; }
+        .vocabulary table.is-minimal .hans   { display: none; }
+        .vocabulary table tbody td.fra { white-space: none }
+
+        .vocabulary table tbody th { font-family: "Dosis", sans-serif !important;}
 
         /* Pratices ******************************************************* */
-        
         div ol { list-style-type: lower-alpha; }
         li { margin-left: 2em;}
 
       </style>
+  
       <section id="main-center" class="column is-8 px-6 pt-6 pb-6 has-background-white">
       
         <div id="T1L1" class="lesson">
