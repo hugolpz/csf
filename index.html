@@ -787,8 +787,6 @@ function json2Table(json, optionalClasses, titles) {
   })
   .join("");
 
-
-
   //build the table
   const table = `
 <table class="table ${optionalClasses} is-fullwidth is-size-5"
@@ -820,7 +818,7 @@ vocabularyHooks.forEach(el => {
       default: titleHan=obj[0].titleHan,titleFra=obj[0].titleFra;
   }
   var header= `
-    <h3_ class="title hant is-inline-block">${titleHan}</h3>
+    <h3_ class="title hant has-text-L${lesson} is-inline-block">${titleHan}</h3>
     <h3 class="title fra is-inline-block">${titleFra}</h3>`
   document.getElementById(el.id).insertAdjacentHTML('beforeend', header);
 
