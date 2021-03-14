@@ -814,8 +814,8 @@ vocabularyHooks.forEach(el => {
   var titleHan=titleFra='';
   switch (section) {
       case 'S': titleHan='一般練習生詞',titleFra='Vocabulaire supplémentaire';break;
-      case 'ES': titleHan='一般練習生詞',titleFra='Vocabulaire exercices supplémentaires';break;
-      default: titleHan=obj[0].titleHan,titleFra=obj[0].titleFra;
+      case 'ES': titleHan='綜合練習生詞',titleFra='Vocabulaire exercices supplémentaires';break;
+      default: titleHan=obj[0].titleHan.replace('對話','生詞') ,titleFra=obj[0].titleFra.replace('Dialogue','Vocabulaire') ;
   }
   var header= `
     <h3_ class="title hant has-text-L${lesson} is-inline-block">${titleHan}</h3>
