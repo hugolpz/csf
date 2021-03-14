@@ -410,6 +410,8 @@ var toggleTarget = function(target) {
 
         .vocabulary table tbody tr:nth-child(even) { background-color: #FFFFFF88; }
         .vocabulary table tbody tr:nth-child(odd) { background: #EEEEEE66; }
+        .vocabulary table tbody tr * { white-space: nowrap }
+        .vocabulary table tbody td:last-child { white-space: none }
 
         /* Pratices ******************************************************* */
         
@@ -818,7 +820,7 @@ vocabularyHooks.forEach(el => {
       default: titleHan=obj[0].titleHan.replace('對話','生詞') ,titleFra=obj[0].titleFra.replace('Dialogue','Vocabulaire') ;
   }
   var header= `
-    <h3_ class="title hant has-text-L${lesson} is-inline-block">${titleHan}</h3>
+    <h3 class="title hant has-text-L${lesson} is-inline-block">${titleHan}</h3>
     <h3 class="title fra is-inline-block">${titleFra}</h3>`
   document.getElementById(el.id).insertAdjacentHTML('beforeend', header);
 
