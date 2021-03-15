@@ -59,9 +59,9 @@
         <!-- LOGO AND NAME -->
         <a id="appLogo" class="navbar-item" href="./">
           <i class="unicorn" style="margin-right: 0.2rem !important;"></i>
-          <span class="has-text-weight-bold has-text-black is-size-4 is-hidden-touch">Chinois Sans Frontières</span>
+          <span class="fra has-text-weight-bold has-text-black is-size-5 is-hidden-touch">Chinois Sans Frontières</span>
         </a>
-        <span id="intro" class="navbar-item">Apprenez le chinois traditionel avec Taiwan !</span>
+        <span id="intro" class="navbar-item fra has-text-weight-semibold is-size-6 is-hidden-mobile">Apprenez le chinois traditionel avec Taiwan !</span>
     <!-- 
         <a id="btnDialogues" class="navbar-item"><span class="icon"><i class="fa fa-align-left"></i></span> <span>Dialogues</span></a>
         <a id="btnLexiques" class="navbar-item"><span class="icon has-text-danger"><i class="fa fa-scroll"></i></span> <span>Lexiques</span></a>
@@ -324,8 +324,7 @@ var toggleTarget = function(target) {
           src:url('fonts/kaishu/AR_PL_ZenKai_Uni.woff2') format('woff2'),
               url('fonts/kaishu/AR_PL_ZenKai_Uni.woff') format('woff'),
               url('fonts/kaishu/AR_PL_ZenKai_Uni.ttf') format('truetype');
-          font-weight: 700;
-          font-style: normal;
+          font-weight: bold;
           font-display: swap;
         }
         @font-face {
@@ -409,16 +408,25 @@ var toggleTarget = function(target) {
         .has-text-L7 { color: #257942; }
         .has-text-L8 { color: orange; }
 
-      /* Tables ********************************************************* */
-        .vocabulary table tbody tr:nth-child(even) { background-color: #FFFFFF88; }
-        .vocabulary table tbody tr:nth-child(odd) { background: #EEEEEE66; }
+        /* Tables ********************************************************* */
+        .vocabulary table {
+          width: 100%;
+        }
+        .vocabulary table tr:nth-child(even) { background-color: #FFFFFF88; }
+        .vocabulary table tr:nth-child(odd) { background: #EEEEEE66; }
         
-        .vocabulary table tbody tr * { white-space: nowrap }
-        .vocabulary table.is-minimal .lesson { display: none; }
-        .vocabulary table.is-minimal .hans   { display: none; }
-        .vocabulary table tbody td.fra { white-space: none }
 
-        .vocabulary table tbody th { font-family: "Dosis", sans-serif !important;}
+        .vocabulary table, 
+        .vocabulary table th.hant { 
+          font-family: "Dosis";
+          }
+        .vocabulary table tr * { white-space: nowrap }
+        .vocabulary table.is-minimal .less { display: none; }
+        .vocabulary table.is-minimal .hans   { display: none; }
+        .vocabulary table td.fra {
+          white-space: normal; 
+          word-break: keep-all;
+        }
 
         /* Pratices ******************************************************* */
         div ol { list-style-type: lower-alpha; }
@@ -426,7 +434,7 @@ var toggleTarget = function(target) {
 
       </style>
   
-      <section id="main-center" class="column is-8 px-6 pt-6 pb-6 has-background-white">
+      <section id="main-center" class="column container has-background-white">  <!-- is-10 px-6 pt-6 pb-6 -->
       
         <div id="T1L1" class="lesson">
           <div>
@@ -781,24 +789,24 @@ textHooks.forEach(el => {
 function json2Table(json, optionalClasses, titles) {
   optionalClasses = optionalClasses || 'has-background-success',
     // let cols = Object.keys(json[0]);
-    titlesClasses = ['num', 'lesson', 'hant', 'hans', 'phon', 'fra'],
+    titlesClasses = ['num', 'less', 'hant', 'hans', 'phon', 'fra'],
     titles = titles || ['#', 'Leçon', 'Chinois', 'Simp.', 'Pinyin', 'Définition'];
   var lesson = json[0].lesson,
       section= json[0].section;
   let headers = titles
-    .map((col, i) => `<th class="${titlesClasses[i]}">${titles[i]}</th>`)
+    .map((col, i) => `<th class="${titlesClasses[i]=='num'?titlesClasses[i]+' is-hidden-touch':titlesClasses[i]}">${titles[i]}</th>`)
     .join("");
 
   let rows = json
   .map((row, num) => {
-    let tds = titles.map((col, i) => `<td class="${titlesClasses[i]}">${i==2?`<span class="icon is-small has-text-L${row.lesson}"><i class="fas fa-play" aria-hidden="true"></i></span>`:''}${(i==0?num+1:titlesClasses[i]=='lesson'? row.lesson+'.'+row.section/* if lesson column : concat row.lesson and row.section */:titlesClasses[i]=='fra'? row.def/* if definition/fra column : pick row.def data */:row[titlesClasses[i]]/* else, use data of that colum i.*/)}</td>`).join("");
+    let tds = titles.map((col, i) => `<td class="${titlesClasses[i]=='num'?titlesClasses[i]+' is-hidden-touch':titlesClasses[i]}">${titlesClasses[i]=='hant'?`<span class="icon is-small has-text-L${row.lesson}"><i class="fas fa-play" aria-hidden="true"></i></span>`:''}${(i==0?num+1:titlesClasses[i]=='lesson'? row.lesson+'.'+row.section/* if lesson column : concat row.lesson and row.section */:titlesClasses[i]=='fra'? row.def/* if definition/fra column : pick row.def data */:row[titlesClasses[i]]/* else, use data of that colum i.*/)}</td>`).join("");
     return `<tr>${tds}</tr>`; //<td class="num">${num+1}</td>
   })
   .join("");
 
   //build the table
   const table = `
-<table class="table ${optionalClasses} is-fullwidth is-size-5"
+<table class="table ${optionalClasses} is-fullwidth is-size-6-mobile is-size-5"
  audio-file="./audios/L${lesson}-${section=='ES'?'5':'2'} Vocabulaire${section=='ES'?'_supplementaire':''}.mp3">
   <thead>
     <tr>${headers}</tr>
@@ -987,7 +995,36 @@ console.log(text)
 </script>
 
 
+<style>
+#scrollToTopBtn {
+  position: fixed;
+  right:10px;
+  bottom:10px;
+  background-color: #00000088;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px
+}
+</style>
+<button id="scrollToTopBtn"
+class="has-background-L3">☝️</button>
+<script>
+var scrollToTopBtn = document.getElementById("scrollToTopBtn")
+var rootElement = document.documentElement
 
+function scrollToTop() {
+  // Scroll to top logic
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
+</script>
 
     </main>
 
