@@ -101,7 +101,15 @@
           </a>
           <div class="navbar-item">
             <p class="control">
-              <a class="button is-primary" style="height: 2.25em; padding: calc(.375em - 1px) .75em;" href="">
+              <a class="button is-success is-small fonts is-rounded" onclick="toggleBetweenFonts()">
+                <strong>字型</strong>
+              </a>
+            </p>
+          </div>
+          <div class="navbar-item">
+            <p class="control">
+
+              <a class="button is-primary is-small" href="">
                 <strong>Installer</strong>
               </a>
             </p>
@@ -336,7 +344,6 @@ var toggleTarget = function(target) {
           font-style: normal;
           font-display: swap;
         }
-        .hant,
         .kaishu {
           font-family: 'kaishu';
         }
@@ -423,6 +430,7 @@ var toggleTarget = function(target) {
         .vocabulary table tr * { white-space: nowrap }
         .vocabulary table.is-minimal .less { display: none; }
         .vocabulary table.is-minimal .hans   { display: none; }
+        .vocabulary table td.phon, 
         .vocabulary table td.fra {
           white-space: normal; 
           word-break: keep-all;
@@ -987,6 +995,27 @@ hantElements.forEach(hantElement => {
 })
 
 
+/* ************************************************************************* */
+/* toggleNClasses ********************************************************** */
+var toggleNClasses = function(selector, arrClasses) {
+  var elements = Array.from(document.querySelectorAll(selector)),
+  	classList = document.querySelector(selector).classList,     // check on first element onl
+    intersect = arrClasses.filter(x => classList.contains(x)), // class present
+    curr = intersect[0] || arrClasses[0],        // assumes default state is class1.
+    next = arrClasses[(arrClasses.indexOf(curr) + 1) % arrClasses.length];
+  // loop over all the class defined in selector
+  elements.forEach(function(item, i) {
+    arrClasses.forEach(classN => item.classList.remove(classN)) // clean classes
+    item.classList.add(next); // add new class
+  })
+}
+// Toggle fonts
+var toggleBetweenFonts= function() {
+  toggleNClasses('.hant', ['_', 'kaishu', 'zhuyin'])
+}
+toggleBetweenFonts(); // 
+/* ************************************************************************* */
+/* Print hant texts ******************************************************** */
 var  text=[];
 document.querySelectorAll(".hant").forEach(e=>{
   text.push(e.textContent.trim());
@@ -998,7 +1027,7 @@ console.log(text)
 <style>
 #scrollToTopBtn {
   position: fixed;
-  right:10px;
+  right:20px;
   bottom:10px;
   background-color: #00000088;
   border: none;
