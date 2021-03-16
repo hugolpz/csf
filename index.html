@@ -345,7 +345,7 @@ var toggleTarget = function(target) {
           font-display: swap;
         }
         .kaishu {
-          font-family: 'kaishu';
+          font-family: 'kaishu'!important;
         }
         .zhuyin {
           font-family: "zhuyin";
@@ -443,16 +443,57 @@ var toggleTarget = function(target) {
       </style>
   
       <section id="main-center" class="column container has-background-white">  <!-- is-10 px-6 pt-6 pb-6 -->
-        <div id="home" class="home" onclick="toggleTarget('.home');showTargetsAll('.lesson')">
-          <script>document.addEventListener("DOMContentLoaded", function(event) { 
-            toggleTarget('.lesson')
-          });</script>
-          Hi there
+          
 
-        </div>      
+        <div id="home" class="home" onclick="toggleTarget('.home');showTargetsAll('.lesson')" class="dialogue columns is-tablet is-multiline is-centered is-vcentered has-ratio is-4by3" style="background: url('./images/Tome_1-Lesson_8-Dialogue_B.png') no-repeat center; background-size: 60%;">
+          <div class="column is-12">
+            <div class="content is-centered has-text-centered">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <h3 class="title is-size-1 fra is-centered has-text-centered has-text-L1" style="background: #23D16088;padding:.4em;color: #FF3860">Chinois Sans Frontières</h3>
+              <span class="subtitle is-size-4 fra has-text-right-desktop" style="background: #FFFFFF88;padding:.5em;"> grace au soutien du <a href="https://roc-taiwan.org/fr_fr/">Bureau de Représentation de Taïpei en France</a>.</span>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+
+              <p style="background: #FFFFFF88;padding:.5em;">Extraits du manuel <b><i>Chinois Sans Frontières</i></b>
+                <a href="https://librairielephenix.fr/livres/chinois-sans-frontieres-tome-i-9782378680008.html">Tome 1</a> et
+                <a href="https://librairielephenix.fr/livres/chinois-sans-frontieres-tome-2-9782378680015.html">Tome 2</a>
+                — Shih-chang Hsin, Miao Lin-Zucker.<br>
+                Réalisation multimédia: Hugo Lopez
+              </p>
+             
+              <a href="https://roc-taiwan.org/fr_fr/">
+                <figure class="image is-64x64" style="display:inline-block;">
+                  <img src="./images/seal-ROC_Ministry_of_Foreign_Affairs.png">
+                </figure>
+              </a>
+              <br>
+            </div>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+              toggleTarget('.lesson')
+            });
+          </script>
+          <br clear="all">
+        </div>
+
+
         <div id="T1L1" class="lesson">
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一、對話</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一<i class="kaishu">、</i>對話</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Dialogues</h2>
             <div id="T1L1TA" class="text"></div>
             <div id="T1L1TB" class="text"></div>
@@ -460,7 +501,7 @@ var toggleTarget = function(target) {
           </div>
       
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二、生詞</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二<i class="kaishu">、</i>生詞</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Vocabulaire</h2>
             <div id="T1L1VA" class="vocabulary" data-list="尼古拉,老師,林老師,好,你好,你,叫,什麼,名字,我,是,哪國人,法國,法國人"
               data-class='is-minimal'></div>
@@ -475,13 +516,13 @@ var toggleTarget = function(target) {
           </div>
       
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五、聽力理解</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五<i class="kaishu">、</i>聽力理解</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Compréhension orale</h2>
             <div id="T1L1PA" class="practice comprehension is-size-5"></div>
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六、發音練習</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L1PB" class="practice pronunciation is-size-5"></div>
             <div id="T1L1PC" class="practice pronunciation is-size-5"></div>
@@ -492,7 +533,7 @@ var toggleTarget = function(target) {
       
         <div id="T1L2" class="lesson">
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一、對話</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一<i class="kaishu">、</i>對話</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Dialogues</h2>
             <div id="T1L2TA" class="text"></div>
             <div id="T1L2TB" class="text"></div>
@@ -500,7 +541,7 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二、生詞</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二<i class="kaishu">、</i>生詞</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Vocabulaire</h2>
             <div id="T1L2VA" class="vocabulary" data-list="請問,哪裡,哪裡人?,巴黎,里昂,大學,可是,的,我的,學校,在"
               data-class='is-minimal'></div>
@@ -515,13 +556,13 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五、聽力理解</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五<i class="kaishu">、</i>聽力理解</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Compréhension orale</h2>
             <div id="T1L2PA" class="practice comprehension is-size-5"></div>
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六、發音練習</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L2PB" class="practice pronunciation is-size-5"></div>
             <div id="T1L2PC" class="practice pronunciation is-size-5"></div>
@@ -532,7 +573,7 @@ var toggleTarget = function(target) {
       
         <div id="T1L3" class="lesson">
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一、對話</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一<i class="kaishu">、</i>對話</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Dialogues</h2>
             <div id="T1L3TA" class="text"></div>
             <div id="T1L3TB" class="text"></div>
@@ -540,7 +581,7 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二、生詞</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二<i class="kaishu">、</i>生詞</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Vocabulaire</h2>
             <div id="T1L3VA" class="vocabulary" data-list="下午,要,做,朋友,去,打球,我們,棒球,喜歡,踢足球,都,很多,騎,自行車,還,運動,慢跑,因為,很忙,所以,很少"
               data-class='is-minimal'></div>
@@ -555,13 +596,13 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五、聽力理解</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五<i class="kaishu">、</i>聽力理解</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Compréhension orale</h2>
             <div id="T1L3PA" class="practice comprehension is-size-5"></div>
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六、發音練習</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L3PB" class="practice pronunciation is-size-5"></div>
             <div id="T1L3PC" class="practice pronunciation is-size-5"></div>
@@ -572,7 +613,7 @@ var toggleTarget = function(target) {
       
         <div id="T1L4" class="lesson">
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一、對話</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一<i class="kaishu">、</i>對話</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Dialogues</h2>
             <div id="T1L4TA" class="text"></div>
             <div id="T1L4TB" class="text"></div>
@@ -580,14 +621,14 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二、生詞</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二<i class="kaishu">、</i>生詞</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Vocabulaire</h2>
             <div id="T1L4VES" class="vocabulary" data-list="大,大家,但是,非常,復習,漢學,漢學系,及,介紹,就是,習天和,每天,誰,系,現在,一下,一樣,怎麼,自己"
               data-class='is-minimal'></div>
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五、聽力理解</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五<i class="kaishu">、</i>聽力理解</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Compréhension orale</h2>
             <div id="T1L4PA" class="practice comprehension is-size-5"></div>
             <div id="T1L4PB" class="practice comprehension is-size-5"></div>
@@ -598,7 +639,7 @@ var toggleTarget = function(target) {
       
         <div id="T1L5" class="lesson">
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一、對話</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一<i class="kaishu">、</i>對話</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Dialogues</h2>
             <div id="T1L5TA" class="text"></div>
             <div id="T1L5TB" class="text"></div>
@@ -606,7 +647,7 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二、生詞</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二<i class="kaishu">、</i>生詞</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Vocabulaire</h2>
             <div id="T1L5VA" class="vocabulary" data-list="幾點,兩點,零,上課,下課,吃,晚飯,對不起,半,先,看書,然後,再,打工,那,以後"
               data-class='is-minimal'></div>
@@ -622,13 +663,13 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五、聽力理解</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五<i class="kaishu">、</i>聽力理解</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Compréhension orale</h2>
             <div id="T1L5PA" class="practice comprehension is-size-5"></div>
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六、發音練習</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L5PB" class="practice pronunciation is-size-5"></div>
             <div id="T1L5PC" class="practice pronunciation is-size-5"></div>
@@ -639,7 +680,7 @@ var toggleTarget = function(target) {
       
         <div id="T1L6" class="lesson">
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一、對話</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一<i class="kaishu">、</i>對話</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Dialogues</h2>
             <div id="T1L6TA" class="text"></div>
             <div id="T1L6TB" class="text"></div>
@@ -647,7 +688,7 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二、生詞</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二<i class="kaishu">、</i>生詞</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Vocabulaire</h2>
             <div id="T1L6VA" class="vocabulary"
               data-list="買,本,幾本,中文書,知道,書店,附近,找,找一找,後面,前面,還是,需要,一些,筆,筆記,筆記本,文具店,就在,旁邊,要不要,順便,新,新書"
@@ -664,13 +705,13 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五、聽力理解</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五<i class="kaishu">、</i>聽力理解</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Compréhension orale</h2>
             <div id="T1L6PA" class="practice comprehension is-size-5"></div>
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六、發音練習</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L6PB" class="practice pronunciation is-size-5"></div>
             <div id="T1L6PC" class="practice pronunciation is-size-5"></div>
@@ -681,7 +722,7 @@ var toggleTarget = function(target) {
       
         <div id="T1L7" class="lesson">
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一、對話</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一<i class="kaishu">、</i>對話</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Dialogues</h2>      
             <div id="T1L7TA" class="text"></div>
             <div id="T1L7TB" class="text"></div>
@@ -689,7 +730,7 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二、生詞</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二<i class="kaishu">、</i>生詞</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Vocabulaire</h2>
             <div id="T1L7VA" class="vocabulary"
               data-list="服務生,菜單,位,過,中國菜,看不懂,能,能不能,肉,魚,雞肉,好久,了,喔,對了,口味,比;比較,酸,甜,酸酸甜甜,味道,辣,點菜,糖醋雞丁,紅燒魚,麻婆豆腐,飲料,香片,馬上,馬上來"
@@ -708,13 +749,13 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五、聽力理解</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五<i class="kaishu">、</i>聽力理解</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Compréhension orale</h2>
             <div id="T1L7PA" class="practice comprehension is-size-5"></div>
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六、發音練習</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L7PB" class="practice pronunciation is-size-5"></div>
             <div id="T1L7PC" class="practice pronunciation is-size-5"></div>
@@ -725,7 +766,7 @@ var toggleTarget = function(target) {
       
         <div id="T1L8" class="lesson">
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一、對話</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">一<i class="kaishu">、</i>對話</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Dialogues</h2>      
             <div id="T1L8TA" class="text"></div>
             <div id="T1L8TB" class="text"></div>
@@ -733,21 +774,21 @@ var toggleTarget = function(target) {
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二、生詞</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">二<i class="kaishu">、</i>生詞</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Vocabulaire</h2>
             <div id="T1L8VES" class="vocabulary" data-list="地點,綠,綠茶,每個,晚餐,王立,午餐,主語"
               data-class='is-minimal'></div>
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五、聽力理解</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五<i class="kaishu">、</i>聽力理解</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Compréhension orale</h2>
             <div id="T1L8PA" class="practice comprehension is-size-5"></div>
             <div id="T1L8PB" class="practice comprehension is-size-5"></div>
           </div>
 
           <div>
-            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六、發音練習</h2>
+            <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L8PC" class="practice pronunciation is-size-5"></div>
           </div>
@@ -762,9 +803,9 @@ var toggleTarget = function(target) {
 var textDataToTemplate = function(obj) {
   var lesson = obj.lesson,
     section  = obj.section,
-    titleHan = obj.titleHan,
+    titleHan = obj.titleHan.replace(/、/g,'<i class="kaishu">、</i>'),
     titleFra = obj.titleFra,
-    guidelineHan = obj.guidelineHan,
+    guidelineHan = obj.guidelineHan.replace('、','<i class="kaishu">、</i>'),
     guidelineFra = obj.guidelineFra;
     text = obj.text.replace(/(\n)\s+/g,'$1');
   return `<div class="dialogue columns is-tablet is-multiline is-centered is-vcentered">
@@ -936,19 +977,19 @@ var practicesDataToHTML = function(obj) {
   <br clear="all">`;
 };
 
-/*        <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五、聽力理解</h2>
+/*        <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">五<i class="kaishu">、</i>聽力理解</h2>
           <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Compréhension orale</h2>
           <div id="T1L1PA" class="practice comprehension is-size-5"></div>
     
           </div>
           <div>
-          <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六、發音練習</h2>
+          <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
           <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
           <div id="T1L1PB" class="practice pronunciation is-size-5"></div>
           <div id="T1L1PC" class="practice pronunciation is-size-5"></div>
 
     <div class="pronunciation is-size-5">
-        <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六、發音練習</h2>
+        <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
         <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>      
         <div class="pronunciation is-size-5">
         <h3 class="title is-size-4-touch is-size-3 hant is-inline-block">II) 分辨 si 和 shi: 讀讀看 </h3>
