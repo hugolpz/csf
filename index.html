@@ -14,8 +14,8 @@
     <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/ace/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
     <!-- CSS frameworks : latests, theme -->
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="js/fontawesome@5.8.1.js"></script>
+    <link rel="stylesheet" href="css/bulma@0.9.0.min.css">
 
     <!-- Custom to project -->
     <script src="js/main.js"></script>
@@ -59,7 +59,7 @@
         <!-- LOGO AND NAME -->
         <a id="appLogo" class="navbar-item" href="./">
           <i class="unicorn" style="margin-right: 0.2rem !important;"></i>
-          <span class="fra has-text-weight-bold has-text-black is-size-5 is-hidden-touch">Chinois Sans Frontières</span>
+          <span class="fra has-text-weight-bold has-text-black is-size-5 is-hidden-touch">Chinois Sans Frontières <e class="has-text-success">(Alpha version)</e></span>
         </a>
         <span id="intro" class="navbar-item fra has-text-weight-semibold is-size-6 is-hidden-mobile">Apprenez le chinois traditionel avec Taiwan !</span>
     <!-- 
@@ -393,8 +393,8 @@ var toggleTarget = function(target) {
         .lesson {
           box-sizing: border-box;
           word-break: break-all;
-          border: 1px #cecece solid;
-          /* overflow: hidden; */
+          /*border: 1px #cecece solid;
+          overflow: hidden; */
         }
 
         /* Structure ****************************************************** */
@@ -410,6 +410,8 @@ var toggleTarget = function(target) {
         .inline { display:inline-block; }
         img.left { float:left; width:50%; margin-right:2em; }
 
+        /*.pronunciation { display: none; visibility:hidden; }*/
+        /*
         .hook > * {
           display:none;
         }
@@ -418,7 +420,7 @@ var toggleTarget = function(target) {
         }
         .hook.unroll > * {
           display:block;
-        }
+        } */
         
         /* Colors: https://bulma.io/documentation/helpers/color-helpers/ */
         .has-background-red,
@@ -484,11 +486,14 @@ var toggleTarget = function(target) {
             toggleTarget('#scrollToTopBtn');
           }
         }
+        // 
         // Click h3 title, toggle content
-        // dom ready
         $('document').ready(function(){
+          $('.hook > *').addClass('is-hidden');
+          $('.hook > h3').toggleClass('is-hidden');
           $('h3').click(function(){
-            $(this).parent(".hook").toggleClass("unroll");
+            $(this).parent(".hook").find(">*").toggleClass('is-hidden');
+            $(this).toggleClass('is-hidden');
           })
         });
         </script>
@@ -501,12 +506,13 @@ var toggleTarget = function(target) {
 - [] Recordings
 
 - [] PWA button
-- [] Fix Audios 5,6
-- [] Clean practices
+- [x] Fix Audios Comprehension
+- [x] Fix Audios Texts 4,8 => no audio available ; dialogues => textes
+- [x] Clean practices
 
 - [] Add lesson number.
 - [x] Display section titles. Click title, toggle contents.
-- [] 
+- []
   
 -->
         <div id="home" class="home columns is-tablet is-multiline is-centered is-vcentered has-text-centered has-ratio is-4by3">
@@ -568,12 +574,12 @@ var toggleTarget = function(target) {
             <div id="T1L1PA" class="hook practice comprehension is-size-5"></div>
           </div>
 
-          <div>
+          <!--<div>
             <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L1PB" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L1PC" class="hook practice pronunciation is-size-5"></div>
-          </div>
+          </div>-->
       
         </div>
       
@@ -608,13 +614,13 @@ var toggleTarget = function(target) {
             <div id="T1L2PA" class="hook practice comprehension is-size-5"></div>
           </div>
 
-          <div>
+          <!--<div>
             <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L2PB" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L2PC" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L2PD" class="hook practice pronunciation is-size-5"></div>
-          </div>
+          </div>-->
         </div>
       
       
@@ -648,13 +654,13 @@ var toggleTarget = function(target) {
             <div id="T1L3PA" class="hook practice comprehension is-size-5"></div>
           </div>
 
-          <div>
+          <!--<div>
             <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L3PB" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L3PC" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L3PD" class="hook practice pronunciation is-size-5"></div>
-          </div>
+          </div>-->
         </div>
       
       
@@ -715,13 +721,13 @@ var toggleTarget = function(target) {
             <div id="T1L5PA" class="hook practice comprehension is-size-5"></div>
           </div>
 
-          <div>
+          <!--<div>
             <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L5PB" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L5PC" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L5PD" class="hook practice pronunciation is-size-5"></div>
-          </div>
+          </div>-->
         </div>
       
       
@@ -757,13 +763,13 @@ var toggleTarget = function(target) {
             <div id="T1L6PA" class="hook practice comprehension is-size-5"></div>
           </div>
 
-          <div>
+          <!--<div>
             <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L6PB" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L6PC" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L6PD" class="hook practice pronunciation is-size-5"></div>
-          </div>
+          </div>-->
         </div>
       
       
@@ -801,13 +807,13 @@ var toggleTarget = function(target) {
             <div id="T1L7PA" class="hook practice comprehension is-size-5"></div>
           </div>
 
-          <div>
+          <!--<div>
             <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L7PB" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L7PC" class="hook practice pronunciation is-size-5"></div>
             <div id="T1L7PD" class="hook practice pronunciation is-size-5"></div>
-          </div>
+          </div>-->
         </div>
       
       
@@ -834,11 +840,11 @@ var toggleTarget = function(target) {
             <div id="T1L8PB" class="hook practice comprehension is-size-5"></div>
           </div>
 
-          <div>
+          <!--<div>
             <h2 class="title is-size-3-touch is-size-2 hant is-inline-block">六<i class="kaishu">、</i>發音練習</h2>
             <h2 class="title is-size-4-touch is-size-3 fra is-inline-block">Prononciation</h2>
             <div id="T1L8PC" class="hook practice pronunciation is-size-5"></div>
-          </div>
+          </div>-->
         </div>
       
       </section>
