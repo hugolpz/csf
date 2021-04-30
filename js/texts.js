@@ -144,7 +144,7 @@ var texts = [
 	"titleHan":`短文A、中平和馬丁。`,
 	"titleFra":`Texte court A : Zhongping et Martin`,
 	"guidelineHan":`學習這段短文`,
-	"guidelineFra":`Étudiez le texte`,
+	"guidelineFra":`Étudiez ce texte (lecture)`,
 	"text":`
 		中平姓王,叫王中平,他是中國北京人,<br>
 		他的學校在上海。中平平常喜歡打棒球<br>
@@ -159,7 +159,7 @@ var texts = [
 	"titleHan":`短文B、尼古拉和小真。`,
 	"titleFra":`Texte court B : Nicolas et Xiaozhen`,
 	"guidelineHan":`學習這段短文`,
-	"guidelineFra":`Étudiez le texte`,
+	"guidelineFra":`Étudiez ce texte (lecture)`,
 	"text":`
 		尼古拉是法國人,他家在馬賽,<br>
 		可是他的學校在里昂,他家有六個人,<br>
@@ -174,7 +174,7 @@ var texts = [
 	"titleHan":`短文C、朱力安和張玲。`,
 	"titleFra":`Texte court C : Julien et Zhang Ling`,
 	"guidelineHan":`學習這段短文`,
-	"guidelineFra":`Étudiez le texte`,
+	"guidelineFra":`Étudiez ce texte (lecture)`,
 	"text":`
 		朱力安和張玲是同事,朱力安是法國人,<br>
 		張玲是中國人,他們都在中國上海工作。<br>
@@ -357,7 +357,7 @@ var texts = [
 	"titleHan":`短文A、中平,安娜和馬丁`,
 	"titleFra":`Texte court A : Zhongping, Anna et Martin`,
 	"guidelineHan":`學習這段短文`,
-	"guidelineFra":`Étudiez le texte`,
+	"guidelineFra":`Étudiez ce texte (lecture)`,
 	"text":`
 		星期一中平想買幾本書、幾枝筆和筆記本,可是他不知道哪裡有中文書店和<br>
 		文具店。安娜說,學校後面有一家書店,書店旁邊有一家文具店,他們星期二下<br>
@@ -371,7 +371,7 @@ var texts = [
 	"titleHan":`短文B、尼古拉和小真`,
 	"titleFra":`Texte court B : Nicolas et Xiaozhen`,
 	"guidelineHan":`學習這段短文`,
-	"guidelineFra":`Étudiez le texte`,
+	"guidelineFra":`Étudiez ce texte (lecture)`,
 	"text":`
 		尼古拉最近非常忙,他每天早上九點到十二點都有中文課,每天早餐都吃外<br>
 		帶的蛋餅、包子和豆漿。他星期一、三、五晚上要打工,每個星期四下午要去打<br>
@@ -385,7 +385,7 @@ var texts = [
 	"titleHan":`短文C、張玲,小紅和朱力安`,
 	"titleFra":`Texte court C : Zhang Ling, Xiaohong et Julien`,
 	"guidelineHan":`學習這段短文`,
-	"guidelineFra":`Étudiez le texte`,
+	"guidelineFra":`Étudiez ce texte (lecture)`,
 	"text":`
 		星期天中午 12 點張玲和朱力安在公司門口見面,他們一起去一家好吃的飯<br>
 		館吃北京烤鴨。星期一張玲和小紅去買衣服。小紅想買一件黑色的大衣,可是這<br>

@@ -487,9 +487,8 @@ Récemment, ces sœurs-là, se sont installées (住 zhù habiter) dans leur mai
 	`Qu'est-ce que Xiaoyue aime faire comme sport ?
 		a) du baseball.
 		b) du badminton.
-		c) du ski.
-		
-	`]
+		c) du ski.`
+	]
 },
 {
 	"lesson":"5", 
