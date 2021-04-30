@@ -16,9 +16,9 @@
    viewBox="0 0 512 512"
    sodipodi:docname="icons-chinois-sans-frontiere.svg"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   inkscape:export-filename="/media/yug/b7afba40-86bd-4df2-b20d-fdf572995ff21/2020_JS/Chinois-Livre/images/icons-chinois-sans-frontieres-72.png"
-   inkscape:export-xdpi="13.5"
-   inkscape:export-ydpi="13.5">
+   inkscape:export-filename="/media/yug/b7afba40-86bd-4df2-b20d-fdf572995ff21/2020_JS/csf/images/icons-chinois-sans-frontieres-512.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -27,7 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -47,14 +47,14 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.85908469"
-     inkscape:cx="357.36863"
+     inkscape:cx="100.11809"
      inkscape:cy="218.5878"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <path
-     style="opacity:1;fill:#ef2929;fill-opacity:1;stroke:none;stroke-width:1.97429478;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:0, 1.97429475000000010, 3.94858951000000014, 5.92288425000000007, 7.89717900000000039, 9.87147374999999982, 11.84576850999999920, 13.82006325999999952, 15.79435800999999984, 17.76865275999999838, 19.74294751000000048, 21.71724225999999902, 23.69153701000000112, 25.66583177000000049, 27.64012651000000176;stroke-dashoffset:0;stroke-opacity:1"
+     style="opacity:1;fill:#fcaf3e;fill-opacity:1;stroke:none;stroke-width:1.97429478;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:0, 1.97429475000000010, 3.94858951000000014, 5.92288425000000007, 7.89717900000000039, 9.87147374999999982, 11.84576850999999920, 13.82006325999999952, 15.79435800999999984, 17.76865275999999838, 19.74294751000000048, 21.71724225999999902, 23.69153701000000112, 25.66583177000000049, 27.64012651000000176;stroke-dashoffset:0;stroke-opacity:1"
      id="path812"
      sodipodi:type="arc"
      sodipodi:cx="256"
