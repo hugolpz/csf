@@ -350,6 +350,7 @@ var toggleTarget = function(target) {
         }
         @font-face {
           font-family: 'zhuyin';
+          unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF; /* ← doesnt work */
           src:url('fonts/zhuyin/HanWangKaiMediumChuIn.woff2') format('woff2'),
               url('fonts/zhuyin/HanWangKaiMediumChuIn.woff') format('woff'),
               url('fonts/zhuyin/HanWangKaiMediumChuIn.ttf') format('truetype');
@@ -368,7 +369,7 @@ var toggleTarget = function(target) {
         }
 
         .kaishu {
-          font-family: 'kaishu'!important;
+          font-family: 'kaishu';
         }
         .zhuyin {
           font-family: "zhuyin";
@@ -447,14 +448,15 @@ var toggleTarget = function(target) {
         .vocabulary table {
           width: 100%;
         }
-        .vocabulary table tr:nth-child(even) { background-color: #FFFFFF88; }
-        .vocabulary table tr:nth-child(odd) { background: #EEEEEE66; }
+        .vocabulary table thead tr:first-of-type,
+        .vocabulary table tr:nth-of-type(even) { background: #EEEEEE66; }
+        .vocabulary table tr:nth-of-type(odd) { background-color: #FFFFFF88; }
         
 
         .vocabulary table, 
         .vocabulary table th.hant { 
           font-family: "Dosis";
-          }
+        }
         .vocabulary table tr * { white-space: nowrap }
         .vocabulary table.is-minimal .less { display: none; }
         .vocabulary table.is-minimal .hans   { display: none; }
@@ -897,7 +899,7 @@ function json2Table(json, optionalClasses, titles) {
   var lesson = json[0].lesson,
       section= json[0].section;
   let headers = titles
-    .map((col, i) => `<th class="${titlesClasses[i]=='num'?titlesClasses[i]+' is-hidden-touch':titlesClasses[i]=='hant'?'':titlesClasses[i]}">${titles[i]}</th>`)
+    .map((col, i) => `<th class="${titlesClasses[i]=='num'?titlesClasses[i]+' is-hidden-touch':titlesClasses[i]=='hant'?'hant':titlesClasses[i]}">${titles[i]}</th>`)
     .join("");
 
   let rows = json
