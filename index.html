@@ -407,9 +407,11 @@ var toggleTarget = function(target) {
           border-bottom: 1px solid #00000022;
           margin-bottom:2em;
         }
-        .text img { max-width: 400px;}
+        .text img { 
+          max-width: 400px;
+          max-width: -webkit-fill-available;
+        }
         .inline { display:inline-block; }
-        img.left { float:left; width:50%; margin-right:2em; }
 
         /*.pronunciation { display: none; visibility:hidden; }*/
         /*
