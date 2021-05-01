@@ -897,7 +897,7 @@ function json2Table(json, optionalClasses, titles) {
   var lesson = json[0].lesson,
       section= json[0].section;
   let headers = titles
-    .map((col, i) => `<th class="${titlesClasses[i]=='num'?titlesClasses[i]+' is-hidden-touch':titlesClasses[i]}">${titles[i]}</th>`)
+    .map((col, i) => `<th class="${titlesClasses[i]=='num'?titlesClasses[i]+' is-hidden-touch':titlesClasses[i]=='hant'?'':titlesClasses[i]}">${titles[i]}</th>`)
     .join("");
 
   let rows = json
