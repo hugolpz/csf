@@ -4,12 +4,44 @@
   "description": "MVP portage mobile du manuel Chinois Sans Frontières",
   "icons": [
     {
-      "src": "/images/icons-chinois-sans-frontieres-192.png",
+      "src": "/images/icons-chinois-sans-frontieres-coffee-32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/images/icons-chinois-sans-frontieres-coffee-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/images/icons-chinois-sans-frontieres-coffee-64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "/images/icons-chinois-sans-frontieres-coffee-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/images/icons-chinois-sans-frontieres-coffee-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "importance": "required",
+      "src": "/images/icons-chinois-sans-frontieres-coffee-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/icons-chinois-sans-frontieres-512.png",
+      "src": "/images/icons-chinois-sans-frontieres-coffee-256.png",
+      "type": "image/png",
+      "sizes": "265x265"
+    },
+    {
+      "importance": "required",
+      "src": "/images/icons-chinois-sans-frontieres-coffee-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
